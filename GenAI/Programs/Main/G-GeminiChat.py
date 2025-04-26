@@ -22,7 +22,6 @@ prompt=ChatPromptTemplate.from_messages(
 )
 
 
-
 st.title('I am your Gemini Chatbot')
 input_text=st.text_input("Enter your query here")
 
