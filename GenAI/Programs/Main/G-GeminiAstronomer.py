@@ -7,7 +7,7 @@ from langchain_core.output_parsers import StrOutputParser
 load_dotenv()
 # Now we can instantiate our model object and generate chat completions:
 llm = ChatGoogleGenerativeAI(
-    model="gemini-1.5-pro",
+    model="gemini-2.0-flash",
     temperature=0,
     max_tokens=None,
     timeout=None,
@@ -16,7 +16,7 @@ llm = ChatGoogleGenerativeAI(
 
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","You are a chatbot"),
+        ("system","You are an astronomer, knowledgeable about the solar system"),
         ("human","Question:{question}")
     ]
 )
