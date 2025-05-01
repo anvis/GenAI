@@ -55,9 +55,12 @@ def structure_UI(output):
 
         # Display in Streamlit UI
         #st.title("Extracted SQLResult")
-        st.dataframe(df)
+      #  st.dataframe(df)
 
-        st.success("SQLResult extracted and displayed successfully! 🚀")
+        with st.expander("SQLResult"):
+            st.write(df)
+
+        st.success("sSQLResult extracted and displayed successfully! 🚀")
     else:
         st.error("SQLResult not found in response.")
 
