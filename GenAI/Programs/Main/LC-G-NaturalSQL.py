@@ -43,12 +43,7 @@ class CustomChain(Chain):
 # Input prompt
 user_prompt = st.text_input("Enter your prompt:", "")
 
-# Run the chain
-if user_prompt:
-    # Execute the chain
-    chain = CustomChain()
-    output = chain.invoke({"processed_text": user_prompt})
-    #st.write(output)  # Display the output in Streamlit
+def structure_UI(output):
     match = re.search(r"SQLResult:\n```\n([\s\S]+?)\n```", output["response"])
     if match:
         sql_result_text = match.group(1)
@@ -65,6 +60,16 @@ if user_prompt:
         st.success("SQLResult extracted and displayed successfully! 🚀")
     else:
         st.error("SQLResult not found in response.")
+
+
+# Run the chain
+if user_prompt:
+    # Execute the chain
+    chain = CustomChain()
+    output = chain.invoke({"processed_text": user_prompt})
+    #st.write(output)  # Display the output in Streamlit
+    structure_UI(output)  # Display the structured SQLResult
+    
 
 
 
