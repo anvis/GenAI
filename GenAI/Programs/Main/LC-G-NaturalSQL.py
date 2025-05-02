@@ -10,10 +10,16 @@ import json
 
 st.title('Natural Language to SQL using Langchain and Gemini')
 
+# Define available LLMs
+llms = ["gemini-1.5-pro", "gemini-2.0-flash"]
+
+# Create a dropdown for LLM selection
+selected_llm = st.selectbox("Select an LLM:", llms)
+
 def preprocess_text(processed_text):
     """Example preprocessing method."""
     print(f"Preprocessing: {processed_text}")
-    return NaturalSQL_Gemini(processed_text)  # Ensure this returns a value
+    return NaturalSQL_Gemini(processed_text, selected_llm)  # Ensure this returns a value
 
 def generate_response(text):
     """Example response generator."""
@@ -43,8 +49,20 @@ class CustomChain(Chain):
 # Input prompt
 user_prompt = st.text_input("Enter your prompt:", "")
 
-def structure_UI(output):
-    match = re.search(r"SQLResult:\n```\n([\s\S]+?)\n```", output["response"])
+def structure_UI(output, placeholder):
+    #placeholder = "SQLResult"
+    if "SQLResult" in placeholder:
+        pattern = rf"{placeholder}:?\n```\n([\s\S]+?)\n```"
+    if "sql" in placeholder:
+        pattern =  rf"{placeholder}\n([\s\S]+?)\n"
+    if "Answer" in placeholder: 
+        pattern = r"Answer:\n([\s\S]+)"
+
+
+    # Extract the SQLResult using regex
+    match = re.search(pattern, output["response"])
+
+    #match = re.search(r"SQLResult:\n```\n([\s\S]+?)\n```", output["response"])
     if match:
         sql_result_text = match.group(1)
 
@@ -57,12 +75,27 @@ def structure_UI(output):
         #st.title("Extracted SQLResult")
       #  st.dataframe(df)
 
-        with st.expander("SQLResult"):
+       # st.write(df)
+
+     
+        if "SQLResult" in placeholder:
+         with st.expander(placeholder):
+            #st.code(df, language="text")
             st.write(df)
 
-        st.success("sSQLResult extracted and displayed successfully! 🚀")
-    else:
-        st.error("SQLResult not found in response.")
+        if "sql" in placeholder:
+         with st.expander(placeholder):
+            st.code(df, language="sql")
+
+        if "Answer" in placeholder: 
+         with st.expander(placeholder):
+            st.code(df, language="text")
+    
+
+
+        #st.success("SQLResult extracted and displayed successfully! 🚀")
+   # else:
+      #  st.error("SQLResult not found in response.")
 
 
 # Run the chain
@@ -71,7 +104,9 @@ if user_prompt:
     chain = CustomChain()
     output = chain.invoke({"processed_text": user_prompt})
     #st.write(output)  # Display the output in Streamlit
-    structure_UI(output)  # Display the structured SQLResult
+    structure_UI(output, "SQLResult")
+    structure_UI(output, "sql")
+    structure_UI(output, "Answer")  # Display the structured SQLResult
     
 
 
