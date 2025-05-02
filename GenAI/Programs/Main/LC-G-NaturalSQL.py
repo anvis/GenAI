@@ -10,11 +10,26 @@ import json
 
 st.title('Natural Language to SQL using Langchain and Gemini')
 
+
+# Header
+st.markdown("""
+    <h1 style='text-align: center; color: #4CAF50;'>🚀 English ➡️ SQL </h1>
+    <h2 style='text-align: center; color: #555;'>Transform Natural Language into SQL Queries</h2>
+    <p style='text-align: center; color: #777;'>This application allows you to convert natural language queries into SQL using Gemini LLM.</p>
+""", unsafe_allow_html=True)
+
+st.markdown("### 📌 Output")
+
+
 # Define available LLMs
 llms = ["gemini-1.5-pro", "gemini-2.0-flash"]
 
-# Create a dropdown for LLM selection
-selected_llm = st.selectbox("Select an LLM:", llms)
+with st.sidebar:
+    # Create a dropdown for LLM selection
+    selected_llm = st.selectbox("Select an LLM:", llms)
+    # Input prompt
+    user_prompt = st.text_input("Enter your prompt:", "")
+    st.button("🚀 Submit")
 
 def preprocess_text(processed_text):
     """Example preprocessing method."""
@@ -46,8 +61,7 @@ class CustomChain(Chain):
     def output_keys(self):
         return ["response"]
 
-# Input prompt
-user_prompt = st.text_input("Enter your prompt:", "")
+
 
 def structure_UI(output, placeholder):
     #placeholder = "SQLResult"
@@ -81,7 +95,8 @@ def structure_UI(output, placeholder):
         if "SQLResult" in placeholder:
          with st.expander(placeholder):
             #st.code(df, language="text")
-            st.write(df)
+            #st.table(df) #write
+            st.dataframe(df)
 
         if "sql" in placeholder:
          with st.expander(placeholder):
