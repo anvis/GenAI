@@ -5,54 +5,53 @@ from langchain_core.prompts import PromptTemplate
 from langchain.chains.base import Chain
 import pandas as pd
 import re
-import json
 
 
-st.title('Natural Language to SQL using Langchain and Gemini')
+# Header Section
+st.markdown(
+    """
+    <h1 style='text-align: center; color: #4CAF50;'> English ➡️ SQL </h1>
+    <h2 style='text-align: center; color: #555;'>Transform Natural Language into SQL Queries</h2>    
+    """,
+    unsafe_allow_html=True
+)
 
-
-# Header
-st.markdown("""
-    <h1 style='text-align: center; color: #4CAF50;'>🚀 English ➡️ SQL </h1>
-    <h2 style='text-align: center; color: #555;'>Transform Natural Language into SQL Queries</h2>
-    <p style='text-align: center; color: #777;'>This application allows you to convert natural language queries into SQL using Gemini LLM.</p>
-""", unsafe_allow_html=True)
-
-st.markdown("### 📌 Output")
 
 
 # Define available LLMs
 llms = ["gemini-1.5-pro", "gemini-2.0-flash"]
 
+# Sidebar for User Input
 with st.sidebar:
-    # Create a dropdown for LLM selection
     selected_llm = st.selectbox("Select an LLM:", llms)
-    # Input prompt
     user_prompt = st.text_input("Enter your prompt:", "")
     st.button("🚀 Submit")
 
+# Preprocessing Function
 def preprocess_text(processed_text):
-    """Example preprocessing method."""
+    """Preprocess the input text."""
     print(f"Preprocessing: {processed_text}")
-    return NaturalSQL_Gemini(processed_text, selected_llm)  # Ensure this returns a value
+    return NaturalSQL_Gemini(processed_text, selected_llm)
 
+# Response Generation Function
 def generate_response(text):
-    """Example response generator."""
+    """Generate a response for the given text."""
     print(f"Generating response for: {text}")
-    return f"Processed input: {text}"    
+    return f"Processed input: {text}"
 
 # Wrap functions in RunnableLambda
 preprocessor = RunnableLambda(preprocess_text)
 response_generator = RunnableLambda(generate_response)
 
-# Define prompt template
+# Define Prompt Template
 prompt = PromptTemplate.from_template("{processed_text}")
 
-# Create a simple chain
+# Custom Chain Class
 class CustomChain(Chain):
     def _call(self, inputs):
         prompt = inputs["processed_text"]
         return {"response": preprocess_text(prompt)}
+
     @property
     def input_keys(self):
         return ["processed_text"]
@@ -61,22 +60,19 @@ class CustomChain(Chain):
     def output_keys(self):
         return ["response"]
 
-
-
+# UI Structure Function
 def structure_UI(output, placeholder):
-    #placeholder = "SQLResult"
+    """Structure the UI to display SQL results."""
+    # Define regex patterns based on placeholder
     if "SQLResult" in placeholder:
         pattern = rf"{placeholder}:?\n```\n([\s\S]+?)\n```"
-    if "sql" in placeholder:
-        pattern =  rf"{placeholder}\n([\s\S]+?)\n"
-    if "Answer" in placeholder: 
+    elif "sql" in placeholder:
+        pattern = rf"{placeholder}\n([\s\S]+?)\n"
+    elif "Answer" in placeholder:
         pattern = r"Answer:\n([\s\S]+)"
-
 
     # Extract the SQLResult using regex
     match = re.search(pattern, output["response"])
-
-    #match = re.search(r"SQLResult:\n```\n([\s\S]+?)\n```", output["response"])
     if match:
         sql_result_text = match.group(1)
 
@@ -86,63 +82,29 @@ def structure_UI(output, placeholder):
         df = pd.DataFrame(rows, columns=columns)
 
         # Display in Streamlit UI
-        #st.title("Extracted SQLResult")
-      #  st.dataframe(df)
+        with st.expander(placeholder):
+            if "SQLResult" in placeholder:
+                st.dataframe(df)
+            elif "sql" in placeholder:
+                st.markdown(f"<p style='color: #4CAF50; font-size: 18px;'> {sql_result_text}</p>", unsafe_allow_html=True)
+            elif "Answer" in placeholder:
+                st.markdown(f"<p style='color: #4CAF50; font-size: 18px;'> {sql_result_text}</p>", unsafe_allow_html=True)
 
-       # st.write(df)
-
-     
-        if "SQLResult" in placeholder:
-         with st.expander(placeholder):
-            #st.code(df, language="text")
-            #st.table(df) #write
-            st.dataframe(df)
-
-        if "sql" in placeholder:
-         with st.expander(placeholder):
-            st.code(df, language="sql")
-
-        if "Answer" in placeholder: 
-         with st.expander(placeholder):
-            st.code(df, language="text")
-    
-
-
-        #st.success("SQLResult extracted and displayed successfully! 🚀")
-   # else:
-      #  st.error("SQLResult not found in response.")
-
-
-# Run the chain
+# Run the Chain
 if user_prompt:
-    # Execute the chain
     chain = CustomChain()
     output = chain.invoke({"processed_text": user_prompt})
-    #st.write(output)  # Display the output in Streamlit
+    # Output Section Header
+    st.markdown("### 📌 Output")
     structure_UI(output, "SQLResult")
     structure_UI(output, "sql")
-    structure_UI(output, "Answer")  # Display the structured SQLResult
-    
+    structure_UI(output, "Answer")
 
+st.write("\n" * 50) 
 
-
-
-"""
-    df = pd.DataFrame(output["response"])
-
-    for index, row in df.iterrows():
-        with st.expander(f"Row {index + 1}"):
-            for col in df.columns:
-                st.write(f"**{col}:** {row[col]}")
-            st.write("---")  # Separator for clarity
-
-   
-    with st.expander("Processed_text"):
-     st.write(output["Processed_text"])
-
-    with st.expander("Skills"):
-     st.write(output["skills"])
-
-    with st.expander("Projects"):
-     st.write(output["Projects"])
-     """
+# Footer with Branding
+st.markdown("""
+    <hr>
+    <p style='text-align: center; color: #777;'>Natural Language to SQL using Langchain and Gemini</p>
+            <p style='text-align: center; color: #777;'>This application allows you to convert natural language queries into SQL using Gemini LLM.</p>
+""", unsafe_allow_html=True)
