@@ -33,15 +33,8 @@ def preprocess_text(processed_text):
     print(f"Preprocessing: {processed_text}")
     return NaturalSQL_Gemini(processed_text, selected_llm)
 
-# Response Generation Function
-def generate_response(text):
-    """Generate a response for the given text."""
-    print(f"Generating response for: {text}")
-    return f"Processed input: {text}"
-
 # Wrap functions in RunnableLambda
 preprocessor = RunnableLambda(preprocess_text)
-response_generator = RunnableLambda(generate_response)
 
 # Define Prompt Template
 prompt = PromptTemplate.from_template("{processed_text}")
