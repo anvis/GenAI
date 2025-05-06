@@ -67,7 +67,8 @@ def structure_UI(output, placeholder):
     if "SQLResult" in placeholder:
         pattern = rf"{placeholder}:?\n```\n([\s\S]+?)\n```"
     elif "sql" in placeholder:
-        pattern = rf"{placeholder}\n([\s\S]+)"
+       # pattern = rf"{placeholder}\n([\s\S]+)"
+        pattern = rf"{placeholder}\n([\s\S]+?)\n"
     elif "Answer" in placeholder:
         pattern = r"Answer:\n([\s\S]+)"
 
