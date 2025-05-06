@@ -67,6 +67,7 @@ def structure_UI(output, placeholder):
     if "SQLResult" in placeholder:
         pattern = rf"{placeholder}:?\n```\n([\s\S]+?)\n```"
     elif "sql" in placeholder:
+       # pattern = rf"{placeholder}\n([\s\S]+)"
         pattern = rf"{placeholder}\n([\s\S]+?)\n"
     elif "Answer" in placeholder:
         pattern = r"Answer:\n([\s\S]+)"
@@ -86,7 +87,8 @@ def structure_UI(output, placeholder):
             if "SQLResult" in placeholder:
                 st.dataframe(df)
             elif "sql" in placeholder:
-                st.markdown(f"<p style='color: #4CAF50; font-size: 18px;'> {sql_result_text}</p>", unsafe_allow_html=True)
+                st.code(sql_result_text, language="sql")
+               # st.markdown(f"<p style='color: #4CAF50; font-size: 18px;'> {sql_result_text}</p>", unsafe_allow_html=True)
             elif "Answer" in placeholder:
                 st.markdown(f"<p style='color: #4CAF50; font-size: 18px;'> {sql_result_text}</p>", unsafe_allow_html=True)
 

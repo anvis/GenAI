@@ -17,6 +17,7 @@ def NaturalSQL_Gemini(text, modelName="gemini-1.5-pro"):
 
     # Ask a question
     response = query_chain.invoke({"question": text})
+    print("Response from Gemini:")
     print(response)
     return response
 
