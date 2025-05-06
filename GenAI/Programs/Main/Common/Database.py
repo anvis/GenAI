@@ -2,9 +2,6 @@
 
 from langchain_community.utilities import SQLDatabase
 from sqlalchemy import create_engine
-from langchain.prompts import PromptTemplate
-from langchain_core.prompts import PromptTemplate
-
 
 def get_database_connection(server, database, username, password):
     """
@@ -49,26 +46,3 @@ def get_db():
 # pip install pymssql
 
 # pip install -qU langchain-google-genai langchain-community sqlalchemy
-
-def run_Query(chain, query):
-    """
-    Executes a SQL query and returns the result.
-
-    Args:
-        db (SQLDatabase): A LangChain SQLDatabase object.
-        query (str): The SQL query to execute.
-
-    Returns:
-        pd.DataFrame: The result of the query as a DataFrame.
-    """
-    print("Running query:", query)
-
-    prompt_template = PromptTemplate(
-    input_variables=["query"],
-    template="Given the SQL query: {query}, provide a response."
-    )
-
-    
-
-
-    return chain.run(query)
