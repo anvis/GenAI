@@ -19,7 +19,7 @@ st.markdown(
 
 
 # Define available LLMs
-llms = ["gemini-1.5-pro", "gemini-2.0-flash"]
+llms = [ "gemini-2.0-flash", "gemini-1.5-pro"]
 
 # Sidebar for User Input
 with st.sidebar:
