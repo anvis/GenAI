@@ -1,0 +1,24 @@
+
+Hugging@4567
+
+
+python -m venv .duckenv
+
+# Windows command prompt
+.duckenv\Scripts\activate
+
+
+pip install -r requirements.txt
+
+
+Hugging Face Token  
+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 Read Token
+
+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 Write Token
+
+huggingface-cli login // Just Right click and hit enter, dont use ctrl+v
+
+python filename.py
+
+
+Delete C:\Users\Anvi\.cache\huggingface\hub
