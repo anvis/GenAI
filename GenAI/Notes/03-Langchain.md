@@ -35,6 +35,8 @@ Steps to install:
 
 ## Prompt Templating
 
+A prompt template in LangChain is a structured way to create prompts with dynamic inputs for language models. It consists of a text string, often referred to as “the template,” which can incorporate parameters provided by users to generate a specific prompt
+
 LangChain provides prompt templates to structure inputs for language models, ensuring consistency and adaptability. These templates help format user input into structured prompts, making interactions with LLMs more effective.
 
 Types of Prompt Templates in LangChain:
@@ -62,6 +64,11 @@ Types of Prompt Templates in LangChain:
                                             MessagesPlaceholder("msgs")])
        print(prompt_template.invoke({"msgs": [HumanMessage(content="hi!")]}))'
 
+- System Message Template: This is like instructions for an AI before it starts talking to you. It sets the rules for how the AI should behave, what it can do, and how it should respond.
+- 
+- Human Message Template: This is more like a guide for people when they talk to an AI. It helps users ask questions in a way that gets the best response.
+
+Think of it like this: The system message is like telling a chef how to cook, and the human message is like ordering food from the menu. The chef (AI) follows the instructions, while the customer (you) chooses what to ask.
 
 
 ## Chains
@@ -74,6 +81,7 @@ Chains link multiple functions and pass output from one function as input to oth
 
 LangChain provides various chain types that allow developers to build and customize workflows for natural language processing tasks. These chain types help streamline the integration of language models and other tools into applications. So basically a chain type is nothing more than tying together a series of tasks where we are chaining together different task and we are passing the input from the first one over to the next one. The pipe operator is used to act like a chain for each sub sequent tasks.
 
+ A “chain” refers to a sequence of actions or tasks that are linked together to achieve a specific goal. You can create a chain that takes user input, processes it with a language model, and then generates a response.
 
 
 Types of Chains in LangChain:
@@ -108,6 +116,8 @@ LangChain’s **chains** allow for modular, reusable workflows, making AI applic
 
 ## Agents
 Autonomous entities using tools (e.g., Google Search API via Surp API).
+
+An Agent is a component that plays a vital role in determining the next steps or actions to be taken within a chain of calls to language models (LLMs) or other tools. An Agent has access to a suite of tools and toolkits which it uses to make decisions on the next action in the sequence.
 
 ## Memory
 Retaining conversation history.
