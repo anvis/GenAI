@@ -64,6 +64,11 @@ Types of Prompt Templates in LangChain:
                                             MessagesPlaceholder("msgs")])
        print(prompt_template.invoke({"msgs": [HumanMessage(content="hi!")]}))'
 
+- System Message Template: This is like instructions for an AI before it starts talking to you. It sets the rules for how the AI should behave, what it can do, and how it should respond.
+- 
+- Human Message Template: This is more like a guide for people when they talk to an AI. It helps users ask questions in a way that gets the best response.
+
+Think of it like this: The system message is like telling a chef how to cook, and the human message is like ordering food from the menu. The chef (AI) follows the instructions, while the customer (you) chooses what to ask.
 
 
 ## Chains
