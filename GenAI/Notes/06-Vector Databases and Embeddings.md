@@ -6,6 +6,16 @@ Here Data is represented as vectors (numerical representations).
 These databases are optimized for similarity search, allowing users to find data points that are close to a given query vector. 
 They are crucial for applications like AI, semantic search, and recommendation systems. 
 
+**Similarity Search**:
+“Similarity search” or “semantic search” refers to finding information that has similar features or meaning from a set of data. It’s like searching for similar movies in an app, looking for similar shoes on an e-commerce website, or finding data related to a specific meaning.
+
+Vector databases use algorithms like Approximate Nearest Neighbor (ANN) search to quickly find similar vectors in the database. This allows for efficient retrieval of relevant data based on similarity. 
+
+similarity search involves three main aspects: creating vector embeddings, calculating similarity, and optimizing search.
+
+As per our code in Text Model, we create Embeddings from LLM and store them in the Vector DB, when query is passed we do similar search on vector db and pass on the result to LLM Model as Documents. The LLM then will give us the required output.
+
+
 **Vector Representation:**
 Data is converted into numerical vectors (arrays of numbers) that capture its characteristics.
 For example, text can be represented as a vector based on word frequencies, and images can be represented based on pixel values or feature extraction. 
@@ -42,14 +52,6 @@ When performing a search, the additional information of count or top “K” is 
 There are multiple ways to optimize your search, detailed description is given below.
 https://medium.com/@sudhiryelikar/understanding-similarity-or-semantic-search-and-vector-databases-5f9a5ba98acb
 
-**Similarity Search**:
-“Similarity search” or “semantic search” refers to finding information that has similar features or meaning from a set of data. It’s like searching for similar movies in an app, looking for similar shoes on an e-commerce website, or finding data related to a specific meaning.
-
-Vector databases use algorithms like Approximate Nearest Neighbor (ANN) search to quickly find similar vectors in the database. This allows for efficient retrieval of relevant data based on similarity. 
-
-similarity search involves three main aspects: creating vector embeddings, calculating similarity, and optimizing search.
-
-As per our code in Text Model, we create Embeddings from LLM and store them in the Vector DB, when query is passed we do similar search on vector db and pass on the result to LLM Model as Documents. The LLM then will give us the required output.
 
 
 **Vector Databases**: Purpose and importance in generative AI applications.
