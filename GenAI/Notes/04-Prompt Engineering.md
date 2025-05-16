@@ -40,5 +40,8 @@ Flow:
 3) A collection of examples, previously stored in a vector store, is used to match and find the most relevant information.
 4) After fetching the relevant examples, the system combines them with the user query to create a clear prompt.
 5) Model processes this constructed prompt, utilizing its pre-existing knowledge and the provided examples, then it generates an output by applying the knowledge learned from those examples to the query.
+
+   example of few shot prompting
+   https://www.youtube.com/watch?v=R9BjOa4Pkdc
    
 
