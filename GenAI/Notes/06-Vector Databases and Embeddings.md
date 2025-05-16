@@ -7,6 +7,7 @@ These databases are optimized for similarity search, allowing users to find data
 They are crucial for applications like AI, semantic search, and recommendation systems. 
 
 **Similarity Search**:
+
 “Similarity search” or “semantic search” refers to finding information that has similar features or meaning from a set of data. It’s like searching for similar movies in an app, looking for similar shoes on an e-commerce website, or finding data related to a specific meaning.
 
 Vector databases use algorithms like Approximate Nearest Neighbor (ANN) search to quickly find similar vectors in the database. This allows for efficient retrieval of relevant data based on similarity. 
@@ -17,14 +18,19 @@ As per our code in Text Model, we create Embeddings from LLM and store them in t
 
 
 **Vector Representation:**
+
 Data is converted into numerical vectors (arrays of numbers) that capture its characteristics.
 For example, text can be represented as a vector based on word frequencies, and images can be represented based on pixel values or feature extraction. 
 
 A vector is essentially a list of numbers that represent some properties of the data. These numbers are placed in a specific order, forming a multidimensional space where relationships between data points can be analyzed.
 
-- **Text Representation (Word Embeddings)**: Words can be converted into numerical vectors using models like Word2Vec, GloVe, or FastText. The idea is that words with similar meanings will have similar numerical representations, allowing computers to understand language in context.
+- **Text Representation (Word Embeddings)**:
+
+Words can be converted into numerical vectors using models like Word2Vec, GloVe, or FastText. The idea is that words with similar meanings will have similar numerical representations, allowing computers to understand language in context.
   
-- **Image Representation**: Pixels of an image can be represented in a multi-dimensional space where each pixel’s color (Red, Green, Blue values) forms a vector.
+- **Image Representation**:
+
+Pixels of an image can be represented in a multi-dimensional space where each pixel’s color (Red, Green, Blue values) forms a vector.
 
 ![image](https://github.com/user-attachments/assets/ec77177b-a0fd-4ff3-9f86-f50b12243e52)
 
@@ -38,6 +44,7 @@ The important aspect of generated embeddings is that similar or semantically rel
 
 
 **Calculating similarity**
+
 Now that we understand how data is represented, we can learn how to find relevant results by calculating the distances between the vector representation of the search query and the existing data.
 
 To find potentially similar data vectors to a query vector, we calculate the distance between all data vectors and the query vector.
@@ -49,6 +56,7 @@ When performing a search, the additional information of count or top “K” is 
 ![image](https://github.com/user-attachments/assets/54276fc3-d470-4963-bf64-68fc1353de84)
 
 **optimizing search**
+
 There are multiple ways to optimize your search, detailed description is given below.
 https://medium.com/@sudhiryelikar/understanding-similarity-or-semantic-search-and-vector-databases-5f9a5ba98acb
 
