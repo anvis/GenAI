@@ -25,8 +25,6 @@ LangChain is particularly useful when working with AI agents, orchestration, and
 
 
 
-
-
 ## Integration with OpenAI and Other Models
 Steps to install:
 1. Clone the repo
@@ -117,7 +115,32 @@ LangChain’s **chains** allow for modular, reusable workflows, making AI applic
 ## Agents
 Autonomous entities using tools (e.g., Google Search API via Surp API).
 
-An Agent is a component that plays a vital role in determining the next steps or actions to be taken within a chain of calls to language models (LLMs) or other tools. An Agent has access to a suite of tools and toolkits which it uses to make decisions on the next action in the sequence.
+An Agent is a component that plays a vital role in determining the next steps or actions to be taken within a chain of calls to language models (LLMs) or other tools. 
+An Agent has access to a suite of tools and toolkits which it uses to make decisions on the next action in the sequence.
+
+**Agent Types**:
+
+ZERO_SHOT_REACT_DESCRIPTION: This is a zero-shot agent that performs a reasoning step before acting. It's suitable for scenarios where an immediate response is required without prior training.
+
+ZERO_SHOT_REACT_DESCRIPTION is a type of agent that performs a reasoning step before taking action. It does not rely on any chat history, meaning it makes decisions based solely on the current input. This makes it suitable for scenarios where an immediate response is required without the need for context from previous interactions.
+
+REACT_DOCSTORE: This is also a zero-shot agent that performs a reasoning step before acting. However, this agent has access to a document store that allows it to look up relevant information to answer the question. It's suitable for scenarios where the answer can be found in a document store.
+
+SELF_ASK_WITH_SEARCH: This agent breaks down a complex question into a series of simpler questions and uses a search tool to look up answers to the simpler questions in order to answer the original complex question. It's suitable for scenarios where the question is complex and needs to be broken down.
+
+CONVERSATIONAL_REACT_DESCRIPTION: This agent is designed to hold a conversation in addition to using tools. It has methods for creating prompts, validating tools, and constructing an agent from a language model and tools.
+
+CHAT_ZERO_SHOT_REACT_DESCRIPTION: This is a zero-shot agent that performs a reasoning step before acting and is designed to be used in conjunction. 
+
+CHAT_ZERO_SHOT_REACT_DESCRIPTION also performs a reasoning step before acting, but unlike `ZERO_SHOT_REACT_DESCRIPTION`, it uses a chat history variable in the prompt. This means that the final prompt will include the chat history, allowing the agent to remember the context of the chat and the history of the conversation. This agent type is designed for multi-turn tasks that require maintaining the context of a conversation.
+
+CHAT_CONVERSATIONAL_REACT_DESCRIPTION: The context does not provide information about this agent type.
+
+STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION: This is a zero-shot react agent optimized for chat models. This agent is capable of invoking tools that have multiple inputs. It's suitable for chat scenarios where multiple inputs are required.
+
+OPENAI_FUNCTIONS: This is an agent optimized for using open AI functions. It's suitable for scenarios where open AI functions are required.
+
+OPENAI_MULTI_FUNCTIONS: 
 
 ## Memory
 Retaining conversation history.
