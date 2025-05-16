@@ -6,3 +6,4 @@ beautifulsoup4
 chromadb
 google-generativeai 
 pypdf
+langchain-google-genai
