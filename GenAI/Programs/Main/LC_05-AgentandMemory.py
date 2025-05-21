@@ -1,10 +1,9 @@
 from Models.llm import llm
+from Models.LangChainAgent import getAgent
 
 geminiModel = llm.get_Gemini_model() 
 
-
 # - Set Up Conversation Memory:
-
 from langchain.memory import ConversationBufferMemory
 
 memory = ConversationBufferMemory(memory_key="chat_history")
@@ -23,15 +22,20 @@ tools = [Tool(name="SimpleTool", func=simple_tool, description="A basic tool for
 from langchain.agents import initialize_agent
 from langchain.agents import AgentType
 
-agent = initialize_agent(
-    tools=tools,
-    llm=geminiModel,
-    agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    memory=memory,
-    verbose=True
-)
+agent = getAgent(geminiModel, tools, AgentType.ZERO_SHOT_REACT_DESCRIPTION, True)
 
 # - Run the Agent:
 
 response = agent.run("Tell me about LangChain.")
 print(response)
+
+agentWithoutTools = initialize_agent(
+    tools=[],
+    llm=geminiModel,
+    agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
+    memory=memory,
+    verbose=True
+)
+
+#response = agentWithoutTools.run("Tell me about LangChain.")
+#print(response)

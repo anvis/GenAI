@@ -27,8 +27,9 @@ class llm:
 
     def get_Gemini_model(modelName="gemini-2.0-flash"):
     # Initialize Gemini model
-        llm = ChatGoogleGenerativeAI(model=modelName, temperature=0)
+        llm = ChatGoogleGenerativeAI(model=modelName, temperature=0,max_tokens=None)
         return llm
+
     
     def get_ChatPromptTemplate(systemText=None, humanText=None):
        
