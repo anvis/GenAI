@@ -26,6 +26,7 @@ def TextRead_SplitDocument(documents : list[Document], chunk_size=500, chunk_ove
     return split_docs
 
 def Convert_To_Embedding_Gemini(split_docs : list[Document], EmbeddingModel="models/embedding-001"):
+   
    # Initialize  the persistent storage ChromaDB
    chroma_client = chromadb.PersistentClient(path="./chroma_db")  # Persistent storage
 
