@@ -1,13 +1,11 @@
 from Models.llm import llm
 from pydantic import BaseModel, Field
-from langchain_core.prompts import ChatPromptTemplate
 from typing import Optional
 import logging
 from datetime import datetime
 from langchain.output_parsers import StructuredOutputParser
 from langchain_core.output_parsers import PydanticOutputParser
-
-
+from Models.Prompts.Gemini import Prompt_System_Human
 
 
 # --------------------------------------------------------------
@@ -53,12 +51,6 @@ class EventConfirmation(BaseModel):
 
 
 # --------------------------------------------------------------
-# Initialize Gemini Model
-# --------------------------------------------------------------
-
-
-
-# --------------------------------------------------------------
 # Step 2: Define the functions
 # --------------------------------------------------------------
 
@@ -71,12 +63,8 @@ def extract_event_info(user_input: str) -> EventExtraction:
     today = datetime.now()
     date_context = f"Today is {today.strftime('%A, %B %d, %Y')}."
 
-    prompt=ChatPromptTemplate.from_messages(
-    [
-        ("system",f"{date_context} Analyze if the text describes a calendar event."),
-        ("user",f"{user_input}")
-    ]
-    )
+    prompt=Prompt_System_Human(
+   f"{date_context} Analyze if the text describes a calendar event.", f"{user_input}")
     
     chain=prompt|geminiModel
     result= chain.invoke({"user_input": user_input})
@@ -101,12 +89,8 @@ def parse_event_details(description: str) -> EventDetails:
      today = datetime.now()
      date_context = f"Today is {today.strftime('%A, %B %d, %Y')}."
 
-     prompt=ChatPromptTemplate.from_messages(
-    [
-        ("system",f"{date_context} Extract detailed event information. When dates reference 'next Tuesday' or similar relative dates, use this current date as reference."),
-        ("user",f"{description}")
-    ]
-    )  
+     prompt=Prompt_System_Human(f"{date_context} Extract detailed event information. When dates reference 'next Tuesday' or similar relative dates, use this current date as reference.",
+        f"{description}")
       
      chain=prompt|geminiModel
      result= chain.invoke({"description": description})
@@ -128,12 +112,9 @@ def parse_event_details(description: str) -> EventDetails:
 def generate_confirmation(event_details: EventDetails) -> EventConfirmation:
      logger.info("Generating confirmation message")
 
-     prompt=ChatPromptTemplate.from_messages(
-    [
-        ("system","Generate a natural confirmation message for the event. Sign of with your name; susie"),
-        ("user", f"{event_details}")
-    ]
-    )  
+     prompt=Prompt_System_Human("Generate a natural confirmation message for the event. Sign of with your name; susie",
+         f"{event_details}")
+     
      geminiModel = llm.get_Gemini_model().with_structured_output(EventConfirmation)
      eventDetails = str(event_details.model_dump())
 
@@ -147,6 +128,7 @@ def generate_confirmation(event_details: EventDetails) -> EventConfirmation:
 # Step 3: Main execution
 
 user_input = "Let's schedule a 1h team meeting next Tuesday at 2pm with Alice and Bob to discuss the project roadmap."
+user_input01 = "Can you send an email to Alice and Bob to discuss the project roadmap?"
 
 initial_extraction = extract_event_info(user_input)
 logger.info("Event extraction analysis completed")

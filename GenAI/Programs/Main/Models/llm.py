@@ -31,16 +31,7 @@ class llm:
         return llm
 
     
-    def get_ChatPromptTemplate(systemText=None, humanText=None):
-       
-       # systemText = systemText if systemText else self.systemText
-      #  humanText = humanText if humanText else self.humanText
-
-        chat_prompt = ChatPromptTemplate.from_messages([
-             ("system", systemText),
-            ("human", humanText),
-        ])
-        return chat_prompt
+    
 
 
 
