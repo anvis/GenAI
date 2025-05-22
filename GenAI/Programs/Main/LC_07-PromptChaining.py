@@ -22,11 +22,6 @@ logging.basicConfig(
 
 logger = logging.getLogger(__name__)
 
-# --------------------------------------------------------------
-# Initialize Gemini Model
-# --------------------------------------------------------------
-
-geminiModel = llm.get_Gemini_model()
 
 # --------------------------------------------------------------
 # Step 1 :: Defining Classes
@@ -56,6 +51,13 @@ class EventConfirmation(BaseModel):
         description="Generated calendar link if applicable"
     )   
 
+
+# --------------------------------------------------------------
+# Initialize Gemini Model
+# --------------------------------------------------------------
+
+
+
 # --------------------------------------------------------------
 # Step 2: Define the functions
 # --------------------------------------------------------------
@@ -64,41 +66,106 @@ def extract_event_info(user_input: str) -> EventExtraction:
     logger.info("Starting event extraction analysis")
     logger.debug(f"Input text: {user_input}")
 
+    geminiModel = llm.get_Gemini_model().with_structured_output(EventExtraction)
+
     today = datetime.now()
     date_context = f"Today is {today.strftime('%A, %B %d, %Y')}."
-    
-
-    #output_parser = StructuredOutputParser.from_response_schemas(EventExtraction)
-    #output_parser =  PydanticOutputParser(pydantic_object=EventExtraction)
-    #format_instructions = output_parser.get_format_instructions()
-
-    print("Format Instructions:")
-    #print(format_instructions)
-
 
     prompt=ChatPromptTemplate.from_messages(
     [
         ("system",f"{date_context} Analyze if the text describes a calendar event."),
         ("user",f"{user_input}")
-        #("assistant",f"Answer: {format_instructions}"),
-        
     ]
     )
-    print("Prompt Template:")
-    print(prompt)
+    
     chain=prompt|geminiModel
     result= chain.invoke({"user_input": user_input})
-    print(result)
 
+    print("Printing Description:")
+    print(result.description)
+
+    print("Printing is_calendar_event:")
+    print(result.is_calendar_event)
+
+    print("Printing confidence_score:")
+    print(result.confidence_score)
+
+    return result
+
+def parse_event_details(description: str) -> EventDetails:
+     logger.info("Starting parse Event analysis")
+     logger.debug(f"Input text: {description}")
+
+     geminiModel = llm.get_Gemini_model().with_structured_output(EventDetails)
+
+     today = datetime.now()
+     date_context = f"Today is {today.strftime('%A, %B %d, %Y')}."
+
+     prompt=ChatPromptTemplate.from_messages(
+    [
+        ("system",f"{date_context} Extract detailed event information. When dates reference 'next Tuesday' or similar relative dates, use this current date as reference."),
+        ("user",f"{description}")
+    ]
+    )  
+      
+     chain=prompt|geminiModel
+     result= chain.invoke({"description": description})
+
+     print("Printing name:")
+     print(result.name)
+
+     print("Printing date:")
+     print(result.date)
+
+     print("Printing duration_minutes:")
+     print(result.duration_minutes)
+
+     print("Printing participants:")
+     print(result.participants)
+     return result
+
+
+def generate_confirmation(event_details: EventDetails) -> EventConfirmation:
+     logger.info("Generating confirmation message")
+
+     prompt=ChatPromptTemplate.from_messages(
+    [
+        ("system","Generate a natural confirmation message for the event. Sign of with your name; susie"),
+        ("user", f"{event_details}")
+    ]
+    )  
+     geminiModel = llm.get_Gemini_model().with_structured_output(EventConfirmation)
+     eventDetails = str(event_details.model_dump())
+
+     chain=prompt|geminiModel
+     result= chain.invoke({"event_details": eventDetails})
+     return result
+# --------------------------------------------------------------
+
+
+
+# Step 3: Main execution
 
 user_input = "Let's schedule a 1h team meeting next Tuesday at 2pm with Alice and Bob to discuss the project roadmap."
-response = extract_event_info( user_input)
+
+initial_extraction = extract_event_info(user_input)
 logger.info("Event extraction analysis completed")
-print(response)
 
+if (not initial_extraction.is_calendar_event or initial_extraction.confidence_score < 0.7):
+        logger.warning(f"Gate check failed - is_calendar_event: {initial_extraction.is_calendar_event}, confidence: {initial_extraction.confidence_score:.2f}")
+        #return None
+else:
+    logger.info("Gate check passed, proceeding with event processing")
 
+    # Second LLM call: Get detailed event information
+    event_details = parse_event_details(initial_extraction.description)
 
-'''
+    confirmation = generate_confirmation(event_details)
 
+    if confirmation:
+        print(f"Confirmation: {confirmation.confirmation_message}")
+        if confirmation.calendar_link:
+            print(f"Calendar Link: {confirmation.calendar_link}")
+    else:
+        print("This doesn't appear to be a calendar event request.")
 
-'''
