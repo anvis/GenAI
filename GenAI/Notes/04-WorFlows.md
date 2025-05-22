@@ -10,7 +10,7 @@
 
 ## promptchaining
 
-Prompt chaining is a technique used in AI workflows where the output of one prompt is used as the input for the next, creating a structured sequence of interactions. This method helps large language models (LLMs) break down complex tasks into smaller, manageable steps, improving accuracy and coherence.
+Prompt chaining is a technique used in AI workflows where **the output of one prompt is used as the input for the next, creating a structured sequence of interactions.** This method helps large language models (LLMs) break down complex tasks into smaller, manageable steps, improving accuracy and coherence.
 
 For example, instead of asking an LLM to summarize a lengthy document in one go, prompt chaining might first extract key points, then refine them, and finally generate a polished summary. This approach enhances reasoning, debugging, and customization in AI applications.
 
