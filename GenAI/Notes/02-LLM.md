@@ -2,6 +2,7 @@
 ## Table of Contents
 - [What is LLM](#What-is-LLM)
 - [How LLM Works](#How-LLM-Works)
+- [How Deep Neural Networks Train LLMs](#How-Deep-Neural-Networks-Train-LLMs)
 - [Token in LLM](#Token-in-LLM)
 - [Transformer Architecture](#Transformer-Architecture)
 - [Attention Mechanisms](#Attention-Mechanisms)
@@ -49,6 +50,43 @@ When you give a long input to an LLM, it doesn’t just read it and forget — i
    - The rise of deep learning and vector-based language understanding enabled modern LLMs.
    - Since GPT-2 (2019), rapid advancements have led to GPT-4, Gemini, and domain-specific AI tools.
    - Future trends include efficient models, open-source AI, multimodal capabilities (text, image, video), and regulatory oversight.
+
+## How Deep Neural Networks Train LLMs
+
+Deep neural networks are the backbone of **how LLMs learn and refine their responses**. They automate training, helping models improve over time.
+
+**1. Training vs. Testing Data Sets**  
+- The model starts by being exposed to **two types of datasets**:  
+  - **Training Data** – The initial dataset where patterns are learned.  
+  - **Testing Data** – Used to evaluate how well the model applies what it learned.
+
+- Example given in the transcript:  
+  - An LLM is trained to understand if “pineapple belongs on pizza.”  
+  - It looks through past references of the word “pineapple” in various contexts.  
+  - Then, it **ranks possible answers** based on probability.
+
+**2. Probability-Based Responses**  
+- Instead of knowing meaning like a human, the LLM **assesses likelihood** based on text frequency.
+- It generates multiple possible answers and assigns a **completion score** to each.  
+  - Example from transcript:
+    - *"Pineapples don’t do math"* → Low score (bad response).  
+    - *"Pineapples don’t belong on pizza"* → High score (accurate response).  
+
+**3. Hyperparameters & Feedback Loop**  
+- Hyperparameters help refine the **accuracy of responses**.
+- The model is continuously **judged by humans** (reinforcement learning).  
+- When users rate responses (e.g., ChatGPT feedback pop-up), the model **adjusts based on accuracy**.
+
+**4. Response Refinement & Specialization**  
+- The model eventually **remembers high-confidence answers** without re-ranking.  
+- This principle applies to complex tasks like:  
+  - **Text Generation** – Creating fluent responses.  
+  - **Translation** – Converting words between languages.  
+  - **Summarization** – Condensing long-form text accurately.  
+  - **Code Generation** – Generating correct and debuggable code.
+
+Since **LLMs don’t just rely on fixed rules**, training requires **billions of iterations**, neural weight adjustments, and refinement through **self-learning and human feedback**.
+
 
 ## Token in LLM
 
