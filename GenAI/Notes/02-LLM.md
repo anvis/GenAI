@@ -1,6 +1,7 @@
 
 ## Table of Contents
 - [What is LLM](#What-is-LLM)
+- [How LLM Works](#How-LLM-Works)
 - [Token in LLM](#Token-in-LLM)
 - [Transformer Architecture](#Transformer-Architecture)
 - [Attention Mechanisms](#Attention-Mechanisms)
@@ -15,6 +16,39 @@ As models are built bigger and bigger, their complexity and efficacy increases. 
 The size and capability of language models has exploded over the last few years as computer memory, dataset size, and processing power increases, and more effective techniques for modeling longer text sequences are developed.
 
 When you give a long input to an LLM, it doesn’t just read it and forget — it builds an internal memory structure called the KV cache (Key-Value cache). This cache stores the outputs of each transformer layer, letting the model “remember” what it’s already seen.
+
+## How LLM Works
+
+1. Data Collection & Pre-training
+   - LLMs are trained on huge amounts of text data (terabytes or even petabytes).
+   - This data comes from sources like websites, books, articles, and proprietary datasets.
+   - The goal is to expose the model to patterns in human language without explicitly teaching it grammar or meaning.
+
+2. Transformer Architecture
+   - LLMs use a Transformer to process text, allowing them to understand relationships between words.
+   - The Transformer consists of an encoder (extracts meaning) and a decoder (generates meaningful responses).
+   - It uses self-attention mechanisms to assess word relationships, making predictions based on prior occurrences.
+
+3. Training Process & Feedback Loop
+   - Training involves deep neural networks that continuously improve predictions.
+   - A model learns by testing responses against a known set of correct answers.
+   - Example: If asked whether "pineapple belongs on pizza," the model references past text data, ranks possible completions, and selects the most probable one.
+
+4. Fine-Tuning for Specific Use Cases
+   - After pre-training, models can be fine-tuned on domain-specific data (e.g., medical texts, software documentation).
+   - Fine-tuning makes models better at answering questions related to specific industries or tasks.
+   - Reinforcement learning involves humans rating model responses, ensuring accuracy and bias reduction.
+
+5. Final Model Deployment & Inference
+   - Once trained and optimized, LLMs are used for tasks like translation, summarization, code generation, and conversational AI.
+   - During inference, the model processes an input prompt and generates an output based on learned word sequences.
+   - Specialized models emerge when LLMs are adapted for specific industries (e.g., law, healthcare, finance, or company-specific chatbots).
+
+6. Evolution & Future Trends
+   - Early AI models were rule-based (1980s), evolving into probabilistic models in the 2000s.
+   - The rise of deep learning and vector-based language understanding enabled modern LLMs.
+   - Since GPT-2 (2019), rapid advancements have led to GPT-4, Gemini, and domain-specific AI tools.
+   - Future trends include efficient models, open-source AI, multimodal capabilities (text, image, video), and regulatory oversight.
 
 ## Token in LLM
 
