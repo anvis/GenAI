@@ -1,11 +1,11 @@
 
 from Models.llm import get_Gemini_model
-from langchain.prompts import PromptTemplate
+from Models.Prompts.Gemini import Prompt
 
 
 llm = get_Gemini_model("gemini-2.0-flash")
 
-template = PromptTemplate.from_template(
+template = Prompt(
     "Explain {topic} in detail for a age {age} year old would understand"
 )
 

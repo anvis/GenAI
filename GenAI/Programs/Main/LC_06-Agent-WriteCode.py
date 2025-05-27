@@ -1,7 +1,7 @@
 from langchain.agents import Tool, AgentType, initialize_agent
 from Models.llm import llm
 from Models.LangChainAgent import getAgent
-from langchain.prompts import PromptTemplate
+from Models.Prompts.Gemini import Prompt
 
 geminiModel = llm.get_Gemini_model()
 
@@ -11,7 +11,7 @@ def execute_code(code):
     return code
 
 def write_python_code(text: str):
-    prompt =  PromptTemplate.from_template("Write Python code for the following task:\n{input_text}\n\nCode:")
+    prompt =  Prompt("Write Python code for the following task:\n{input_text}\n\nCode:")
     chain = prompt | geminiModel
     response = chain.invoke({"input_text": text}, verbose=False)
     print(response)

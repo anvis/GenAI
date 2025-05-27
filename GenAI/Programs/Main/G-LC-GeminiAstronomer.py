@@ -1,6 +1,6 @@
 import streamlit as st
 from dotenv import load_dotenv
-from langchain_core.prompts import ChatPromptTemplate
+from Models.Prompts.Gemini import Prompt_System_Human
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.output_parsers import StrOutputParser
 
@@ -14,12 +14,7 @@ llm = ChatGoogleGenerativeAI(
     max_retries=2,
 )
 
-prompt=ChatPromptTemplate.from_messages(
-    [
-        ("system","You are an astronomer, knowledgeable about the solar system"),
-        ("human","Question:{question}")
-    ]
-)
+prompt = Prompt_System_Human("You are an astronomer, knowledgeable about the solar system", "Question:{question}")
 
 st.title('I am your Gemini Chatbot')
 input_text=st.text_input("Enter your query here")
