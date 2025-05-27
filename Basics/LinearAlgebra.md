@@ -8,7 +8,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## Vector-and-Matrix
+## Vector and Matrix
 
 **Matrix**
 
@@ -39,3 +39,21 @@ Example The 2*3 matrix is a column vector because it has only one column.
 
 ![image](https://github.com/user-attachments/assets/087ef258-0e08-4ea3-b55d-1faf8148e4c1)
 
+
+**Scalars**
+
+A matrix having only one row and one column is called a scalar.
+
+Example The 1*1 matrix is a scalar. In other words, a scalar is a single number.
+
+![image](https://github.com/user-attachments/assets/56c0b810-e2b0-4d86-b8bc-dd629bdb359e)
+
+
+**Diagonal and off-diagonal elements**
+
+The elements belonging to the diagonal are called diagonal elements, and all the other entries are called off-diagonal.
+Let A be the $3	imes 3$ matrix defined by
+
+![image](https://github.com/user-attachments/assets/5e9f2df2-f05c-433b-914c-8004a3f8ea2d)
+
+All off-diagonal entries of A are equal to 3$, while the three diagonal elements are equal to $5$, $2,$, and 1, respectively.
