@@ -163,3 +163,14 @@ Absolutely! Here are some **high-quality resources** for each learning topic in 
 - **Deployment:** Azure AI services
 
 ---
+
+Deep into Linear Algebra
+
+1. **Vectors and Vector Spaces** – Understanding feature representations, embeddings, and vector operations.
+2. **Matrices and Operations** – Basics of matrix multiplication, transposition, and determinants.
+3. **Dot Product & Cross Product** – Important for similarity measures in ML (e.g., cosine similarity).
+4. **Eigenvalues & Eigenvectors** – Crucial for dimensionality reduction techniques like PCA.
+5. **Singular Value Decomposition (SVD)** – Used in various applications, including recommendation systems.
+6. **Norms & Distance Metrics** – L1/L2 norms, Manhattan & Euclidean distances—key for optimization.
+7. **Gradient & Jacobian Matrix** – Essential for optimization techniques in deep learning.
+   
