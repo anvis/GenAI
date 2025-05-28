@@ -19,6 +19,7 @@ Vectors can be categorized into three types:
 1. Geometric Vectors:
 
    Geometric vectors are directed line segments that illustrate quantities in physical space.
+   
    ![image](https://github.com/user-attachments/assets/eeb1bb1a-2ff2-4254-85a2-93c247b0643b)
 
     Characteristics:
@@ -31,6 +32,7 @@ Vectors can be categorized into three types:
 
 3.  Polynomials
      Polynomials are mathematical expressions consisting of variables and coefficients, combined using addition, subtraction, and multiplication. They play a     crucial role in algebra, calculus, and machine learning applications.
+    
     ![image](https://github.com/user-attachments/assets/9a2199c8-d7e4-430e-ab63-22cb60b65371)
 
   Degree of polynomial is determined by the highest exponent or power of the variable in the expression. It represents the highest degree term in the polynomial.
