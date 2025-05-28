@@ -2,7 +2,7 @@
 
 ## Linear transformation
 - [Linear Transmission](#Linear-Transmission)
-- [Non-Linear Trsnaformations](#Non-Linear-Trsnaformations)
+- [Non-Linear Transformations](#Non-Linear-Transformations)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -32,7 +32,7 @@ Properties: After these transformations, the shape retains:
 
 ![image](https://github.com/user-attachments/assets/a314b5ce-9af4-4db1-a274-7400e367965b)
 
-## Non-Linear Trsnaformations
+## Non-Linear Transformations
 
 
 Non-linear transformations do not preserve the properties of vector addition and scalar multiplication. These transformations can warp, bend, or change the shape of the object.
