@@ -2,7 +2,7 @@
 # Linear Algebra
 
 ## Table of Contents
-- [Linear Algebra](#Linear Algebra)
+- [Linear Algebra](#Linear-Algebra)
 - [Connection between Linear Albegra and Machine Learning](#Connection-between-Linear-Albegra-and-Machine-Learning)
 - [Vector and Matrix](#Vector-and-Matrix)
 - [Installation](#installation)
