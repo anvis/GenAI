@@ -84,6 +84,8 @@ Example in AI & Graphics:
 - Image transformations like translation and rotation use 2D vectors.
 - In physics, velocity is often represented as a 2D vector.
 
+- Graphics, physics, machine learning
+
 **3-Dimensional Space (ℝ³)**
 
 A 3D space has three perpendicular axes:
@@ -95,6 +97,8 @@ A vector in 3D is represented as ( v = (x, y, z) ), where:
 Example in AI & Physics:
 - 3D object positioning in gaming and simulations.
 - Machine learning applications involving spatial data (e.g., LiDAR).
+
+- Gaming, robotics, spatial data analysis
 
 
 
