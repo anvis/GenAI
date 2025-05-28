@@ -22,12 +22,14 @@ Vectors can be categorized into three types:
    ![image](https://github.com/user-attachments/assets/eeb1bb1a-2ff2-4254-85a2-93c247b0643b)
 
     Characteristics:
+   
     Magnitude: The length of the vector, which can be measured in units such as meters or kilograms.
+   
     Direction: The angle at which the vector points, which can be defined with other vectors or reference axes.
 
     ![image](https://github.com/user-attachments/assets/057dd3e4-d8af-488b-911d-de1e734ffefb)
 
-2.  Polynomials
+3.  Polynomials
      Polynomials are mathematical expressions consisting of variables and coefficients, combined using addition, subtraction, and multiplication. They play a     crucial role in algebra, calculus, and machine learning applications.
     ![image](https://github.com/user-attachments/assets/9a2199c8-d7e4-430e-ab63-22cb60b65371)
 
