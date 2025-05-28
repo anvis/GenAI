@@ -82,4 +82,5 @@ Example The 1*1 matrix is a scalar. In other words, a scalar is a single number.
 
 
 
+Source: https://medium.com/@ebimsv/mastering-linear-algebra-part-1-introduction-to-linear-algebra-in-machine-learning-fafcae1a5879
 
