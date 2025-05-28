@@ -3,7 +3,7 @@
 
 - [Introduction](#introduction)
 - [Types of Vectors](#Types-of-Vectors)
-- [Usage](#usage)
+- [2D and 3D Space in Vectors](#2D-and-3D-Space-in-Vectors)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -62,7 +62,39 @@ Unlike terms are terms that have different variables or different powers(even wi
 ![image](https://github.com/user-attachments/assets/6f2b627b-5503-4871-850b-d35964b7a084)
 
 
-  
+Normal Vector: A normal is an object that is perpendicular to a given object. It is a line or vector that intersects another object at a right angle. A normal vector is a vector that is perpendicular to a given surface or curve at a specific point. A unit normal vector is a normal vector whose length is 1
+
+![image](https://github.com/user-attachments/assets/678da19a-b2fd-4000-959e-0721c8fd16cc)
+
+
+
+## 2D and 3D Space in Vectors
+
+2-dimensional Cartesian plane and 3-dimensional space in vectors
+
+A **2D Cartesian plane** consists of two perpendicular axes:
+
+- X-axis (horizontal)
+- Y-axis (vertical)
+A vector in 2D is represented as ( v = (x, y) ), where:
+- ( x ) is the horizontal component.
+- ( y ) is the vertical component.
+
+Example in AI & Graphics:
+- Image transformations like translation and rotation use 2D vectors.
+- In physics, velocity is often represented as a 2D vector.
+
+**3-Dimensional Space (ℝ³)**
+
+A 3D space has three perpendicular axes:
+- X-axis (left-right)
+- Y-axis (up-down)
+- Z-axis (depth)
+A vector in 3D is represented as ( v = (x, y, z) ), where:
+- ( x ), ( y ), and ( z ) define movement in three directions.
+Example in AI & Physics:
+- 3D object positioning in gaming and simulations.
+- Machine learning applications involving spatial data (e.g., LiDAR).
 
 
 
