@@ -31,4 +31,47 @@ fish  → [0, 0, 1, 0]
 bird  → [0, 0, 0, 1]
 ```
 
+#### **Pros:**
+✅ Simple and easy to implement  
+✅ Preserves uniqueness of words  
+
+#### **Cons:**
+❌ Inefficient for large vocabularies (high-dimensional sparse vectors)  
+❌ Doesn't capture word relationships (e.g., "cat" and "dog" are equally distant from "fish")  
+
+---
+
+### **2. Word Embedding (Distributed Representation)**
+- Maps each word to a dense **fixed-length vector**.
+- Word embeddings are **learned** to represent semantic relationships.
+- Examples: **Word2Vec, GloVe, FastText, BERT embeddings**.
+
+#### **Example:**
+If word embeddings have 3 dimensions:
+```
+cat   → [0.85, 0.12, -0.42]
+dog   → [0.88, 0.14, -0.39]
+fish  → [0.30, 0.60, -0.10]
+```
+Notice that "cat" and "dog" have similar values because they are semantically related.
+
+#### **Pros:**
+✅ Captures semantic meaning (words like "king" and "queen" are closer)  
+✅ Lower dimensionality and computational efficiency  
+✅ Helps in downstream NLP tasks like text classification and sentiment analysis  
+
+#### **Cons:**
+❌ Requires training or pre-trained embeddings  
+❌ May struggle with rare or unseen words (though newer models handle this better)  
+
+---
+
+### **Key Differences**
+| Feature           | One-Hot Encoding | Word Embedding |
+|------------------|----------------|---------------|
+| Representation  | Sparse binary vector | Dense numerical vector |
+| Size            | Vocabulary-dependent | Fixed-length |
+| Semantic Meaning | ❌ No | ✅ Yes |
+| Storage        | High memory usage | Efficient |
+
 
