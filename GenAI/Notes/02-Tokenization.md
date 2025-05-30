@@ -3,6 +3,21 @@
 Tokenization is a fundamental process in Large Language Models (LLMs), where text is broken down into smaller units called tokens. 
 These tokens are then used as input for the model, allowing it to process and generate text efficiently. 
 
+Natural language problems use textual data, which cannot be immediately understood by a machine. For computers to process language, they first need to convert the text into a numerical form. This process is carried out in two main stages by a model called the tokenizer.
+
+Step 1: Divide the Input Text into Tokens
+Step 2: Assign an ID to Each Token
+
+The tokenizer first takes the text and divides it into smaller pieces, be that words, parts of words, or individual characters. These smaller pieces of text are called tokens.
+
+Once the tokenizer has divided the text into tokens, each token can be assigned an integer number called a token ID.
+
+An example of this might be the word cat being assigned the value 15, and so every cat token in the input text is represented by the number 15. The process of replacing the textual tokens with a number representation is called encoding. Similarly, the process of converting encoded tokens back into text is called decoding.
+
+
+It turns out that using a single number to represent a token has its drawbacks, and so these encodings are processed further to create word embeddings
+
+
 **1. What Is a Token?**
 
 A **token** is the smallest unit of text that a model can understand and process. Depending on the tokenization method, a token can be:
@@ -25,22 +40,42 @@ LLMs work with numbers rather than raw text. Tokenization converts text into a n
 
 There are several tokenization strategies used in modern NLP:
 
-# **a. Word-based Tokenization**
+**a. Word-based Tokenization**
 - Splits text at spaces.
 - Example: `"I love AI."` → `["I", "love", "AI"]`
 - **Issues:** Doesn't handle unknown words well (e.g., rare words or typos).
 
-# **b. Subword Tokenization (BPE, WordPiece)**
+One of the largest drawbacks with this method is that very similar words are treated as completely separate tokens. For example, the connection between cat and cats would be non-existent, and so these would be treated as separate words. This becomes a problem in large-scale applications that contain many words, as the possible number of tokens in the model’s vocabulary can grow very large. 
+
+One way to combat this is by enforcing a hard limit on the number of tokens the model can learn (e.g. 10,000). This would classify any word outside of the 10,000 most frequent tokens as out-of-vocabulary (OOV), and would assign the token value of UNKNOWN instead of a number value.
+
+**b. Character-based Tokenization**
+- Treats each character as a token.
+- Example: `"Hello"` → `["H", "e", "l", "l", "o"]`
+- **Issues:** Makes sequences too long for processing.
+- Low information stored in each token, little-to-no contextual or semantic meaning (especially with alphabet-based writing systems)
+
+Character-based tokenization splits text on each character, including: letters, numbers, and special characters such as punctuation. This greatly reduces the vocabulary size, to the point where the English language can be represented with a vocabulary of around 256 tokens.
+
+  
+
+**c. Subword Tokenization (BPE, WordPiece)**
 - Breaks words into smaller chunks, improving handling of rare words.
 - Example (BPE): `"unhappiness"` → `["un", "happiness"]`
 - **Used in:** GPT models (BPE), BERT (WordPiece)
 
-# **c. Character-based Tokenization**
-- Treats each character as a token.
-- Example: `"Hello"` → `["H", "e", "l", "l", "o"]`
-- **Issues:** Makes sequences too long for processing.
+Subword-based tokenization aims to achieve the benefits of both word-based and character-based methods, while minimising their downsides. Subword-based methods take a middle ground by splitting text within words in an attempt to create tokens with semantic meaning, even if they are not full words. For example, the tokens ing and ed carry grammatical meaning, although they are not words in themselves.
 
-# **d. Byte-Level Tokenization**
+The subword approach uses the following two guidelines:
+
+- Frequently-used words should not be split into subwords, but rather be stored as entire tokens
+- Infrequently used words should be split into subwords
+
+
+
+
+
+**d. Byte-Level Tokenization**
 - Operates on raw bytes, making it language-agnostic.
 - Example: `"cliché"` → `["c", "l", "i", "ch", "é"]`
 - **Used in:** GPT-3's tokenizer (OpenAI's `GPT-2 tokenizer` works similarly).
