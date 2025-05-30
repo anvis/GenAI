@@ -75,3 +75,4 @@ Notice that "cat" and "dog" have similar values because they are semantically re
 | Storage        | High memory usage | Efficient |
 
 
+https://medium.com/p/eb9326c6ab7c
