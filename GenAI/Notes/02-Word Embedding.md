@@ -6,8 +6,8 @@
 - [What is WordEmbedding](#What-is-WordEmbedding)
 - [One-Hot Encoded Vector](#One-Hot-Encoded-Vector)
 - [Word Embedding](#Word-Embedding)
-- [Contributing](#contributing)
-- [License](#license)
+- [One-Hot Encoded Vector vs Word Embedding](#One-Hot-Encoded-Vector-vs-Word-Embedding)
+- [Denotational vs Distributional Semantics](#Denotational-vs-Distributional-Semantics)
 
 ## What is WordEmbedding
 
@@ -78,7 +78,8 @@ Notice that "cat" and "dog" have similar values because they are semantically re
 ❌ Requires training or pre-trained embeddings  
 ❌ May struggle with rare or unseen words (though newer models handle this better)  
 
----
+
+## One-Hot Encoded Vector vs Word Embedding
 
 ### **Key Differences**
 | Feature           | One-Hot Encoding | Word Embedding |
@@ -90,7 +91,7 @@ Notice that "cat" and "dog" have similar values because they are semantically re
 
 
 
-# Denotational vs Distributional Semantics
+## Denotational vs Distributional Semantics
 
 Denotational semantics is crucial for formal verification and correctness in programming, while distributional semantics helps in tasks like word similarity, machine translation, and sentiment analysis.
 
