@@ -1,5 +1,16 @@
 
 
+# Word Embeddings
+
+## Table of Contents
+- [What is WordEmbedding](#What-is-WordEmbedding)
+- [One-Hot Encoded Vector](#One-Hot-Encoded-Vector)
+- [Word Embedding](#Word-Embedding)
+- [Contributing](#contributing)
+- [License](#license)
+
+## What is WordEmbedding
+
 Word Embedding is the process of taking a word and creating a vector representation in N-dimensional space. 
 
 As a simple example, you could imagine each word having a three-dimensional representation, and then plotting the words in 3D space using these numbers as coordinates. 
@@ -15,6 +26,8 @@ These both require vector inputs to enable linear algebra operations, and so tex
 Sentences can first be split into words (or subword units) called tokens using tokenization.
 These tokens are then assigned an integer value called a token ID, which can be converted into a one-hot encoded vector.
 
+
+## One-Hot Encoded Vector
 
 **1. One-Hot Encoded Vector**
 
@@ -39,9 +52,10 @@ bird  → [0, 0, 0, 1]
 ❌ Inefficient for large vocabularies (high-dimensional sparse vectors)  
 ❌ Doesn't capture word relationships (e.g., "cat" and "dog" are equally distant from "fish")  
 
----
 
-### **2. Word Embedding (Distributed Representation)**
+## Word Embedding
+
+**2. Word Embedding (Distributed Representation)**
 - Maps each word to a dense **fixed-length vector**.
 - Word embeddings are **learned** to represent semantic relationships.
 - Examples: **Word2Vec, GloVe, FastText, BERT embeddings**.
