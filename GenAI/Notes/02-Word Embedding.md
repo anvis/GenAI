@@ -75,4 +75,12 @@ Notice that "cat" and "dog" have similar values because they are semantically re
 | Storage        | High memory usage | Efficient |
 
 
+
+# Denotational vs Distributional Semantics
+
+Denotational semantics is crucial for formal verification and correctness in programming, while distributional semantics helps in tasks like word similarity, machine translation, and sentiment analysis.
+
+
+
+
 https://medium.com/p/eb9326c6ab7c
