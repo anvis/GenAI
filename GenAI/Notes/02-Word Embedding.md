@@ -95,6 +95,10 @@ Notice that "cat" and "dog" have similar values because they are semantically re
 
 Denotational semantics is crucial for formal verification and correctness in programming, while distributional semantics helps in tasks like word similarity, machine translation, and sentiment analysis.
 
+Before embedding words as vectors, it is important to consider what meaning is trying to be encoded. Most linguists think about meaning as being the representation of an idea by a word or group of words. This is called denotational semantics, and is just one way to define the meaning of words. 
+
+For NLP, it is often more helpful to think of the meaning of a word as being determined by the words that frequently co-occur (i.e. words that often appear before or after the word). This is a concept called distributional semantics
+
 
 
 
