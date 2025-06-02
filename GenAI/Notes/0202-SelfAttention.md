@@ -100,6 +100,8 @@ Key Concepts in Self-Attention
 - Softmax Normalization: The relevance scores are passed through a softmax function to assign attention weights, ensuring they sum to 1.
 - Weighted Summation: Each word's final representation is computed by taking a weighted sum of all Value vectors using the attention weights.
 - Multi-Head Attention: Instead of using one set of Q, K, and V vectors, transformers use multiple attention heads, each capturing different aspects of relationships between words.
+
+  
 Why is Self-Attention Powerful?
 - Captures Context: Words can relate to others dynamically, unlike fixed embeddings.
 - Handles Long Sequences Efficiently: Unlike recurrent networks, self-attention enables parallel computation, making it scalable.
