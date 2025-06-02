@@ -1,5 +1,12 @@
 
+## Table of Contents
+- [Transformer Embeddings](#Transformer-Embeddings)
+- [The Issue with Static Embeddings](#The-Issue-with-Static-Embeddings)
+- [Difference between Static and Learned Embeddings](#Difference-between-Static-and-Learned-Embeddings)
+- [Contributing](#contributing)
+- [License](#license)
 
+## Transformer Embeddings
 
 The Transformer is a deep neural network architecture that is the foundation for almost all LLMs today. 
 Derivative models are often called Transformer-based models or transformers for short, and so these terms will be used interchangeably here.
@@ -10,7 +17,7 @@ Perhaps the most important of these steps is applying the self-attention mechani
 
 The process of representing text with vectors is called embedding (or encoding), hence the numerical representations of the input text are known as transformer embeddings.
 
-# The Issue with Static Embeddings
+## The Issue with Static Embeddings
 
 We explored static embeddings for language models using word2vec as an example. 
 This embedding method predates transformers and suffers from one major drawback: the lack of contextual information.
@@ -27,7 +34,7 @@ These two steps take place in distinct components in transformers, namely the po
 By incorporating this additional information, transformers can produce much more powerful vector representations of words based on their usage in the input sequence. 
 Extending the vector representations beyond static embeddings is what enables Transformer-based models to handle polysemous words and gain a deeper understanding of language compared to previous models.
 
-# Difference between Static and Learned Embeddings 
+## Difference between Static and Learned Embeddings 
 
 A key difference between static and learned embeddings is the way in which they are trained. S
 tatic embeddings are trained in a separate neural network (using the Skip-Gram or Continuous Bag of Words architectures) using a word prediction task within a given window size. 
