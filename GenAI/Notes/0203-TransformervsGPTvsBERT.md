@@ -19,9 +19,7 @@
 - Great for tasks like question answering, sentiment analysis, and search engine optimization.
 - Example: Google Search improvements, document classification.
 
-Comparison Table
-| Feature | Transformer (General) | GPT | BERT | 
-| Architecture | Base framework | Autoregressive | Bidirectional | 
-| Focus | Any NLP task | Text generation | Text understanding | 
-| Attention Mechanism | Self-attention | Causal (left-to-right) | Bidirectional | 
-| Example Use | AI models | Chatbots, writing | Search engines, question answering | 
+![image](https://github.com/user-attachments/assets/9cee3a84-5240-44e8-995b-136b10a189e4)
+
+
+https://medium.com/data-science/a-complete-guide-to-bert-with-code-9f87602e4a11
