@@ -108,3 +108,6 @@ Why is Self-Attention Powerful?
 - Adapts to Different Input Structures: Works well across sentences, paragraphs, and even code snippets!
 
 
+https://medium.com/p/d7a9f0f4d94e
+
+
