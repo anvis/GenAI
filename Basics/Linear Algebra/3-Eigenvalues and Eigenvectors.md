@@ -6,6 +6,7 @@ These concepts help us understand the underlying structure of data, reduce dimen
 Eigenvalues and eigenvectors feature prominently in the analysis of linear transformations. 
 
 At the core of many linear transformations are eigenvalues and eigenvectors. 
+
 Given a square matrix A, an eigenvector is a non-zero vector v that changes only in scale when the linear transformation A is applied to it. 
 The scale factor is known as the eigenvalue λ(lambda). Mathematically, this relationship is expressed as:
 
