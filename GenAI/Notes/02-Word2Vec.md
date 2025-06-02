@@ -14,8 +14,8 @@ It's widely used in NLP for tasks like word similarity, document clustering, sen
 How Word2Vec Works:
 - Training on Context – The model learns word relationships from a large corpus by predicting words in context.
 - Two Architectures:
-- Continuous Bag of Words (CBOW) – Predicts a target word given its surrounding words (context window).
-- Skip-Gram – Predicts surrounding words given a target word, better for capturing rare word meanings.
+    - Continuous Bag of Words (CBOW) – Predicts a target word given its surrounding words (context window).
+    - Skip-Gram – Predicts surrounding words given a target word, better for capturing rare word meanings.
 - Vector Space Representation – Words are mapped into high-dimensional space where similar words appear closer together.
 - Dot Product & Cosine Similarity – Helps determine word similarity by measuring angles and distances between vectors.
 - Optimization with Backpropagation – The network refines embeddings through gradient descent and loss minimization.
