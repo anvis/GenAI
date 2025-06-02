@@ -1,7 +1,9 @@
 
 
 word2vec is a family of algorithms that produce distributed word embeddings for use in NLP tasks. 
+
 These vectors are far denser than those created using the one-hot encoding method (i.e. very few, if any, of the elements are 0), and so they can be much smaller in size. 
+
 The idea is to create an N-dimensional vector space, in which similar words are geographically close to each other.
 
 Typically, these embeddings have around 300 dimensions. Once these embeddings are created, they can be written to a file and loaded into memory when needed to essentially form a lookup table at run time. 
