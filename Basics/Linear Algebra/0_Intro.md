@@ -5,10 +5,7 @@
 - [Linear Algebra](#Linear-Algebra)
 - [Connection between Linear Albegra and Machine Learning](#Connection-between-Linear-Albegra-and-Machine-Learning)
 - [Vector and Matrix](#Vector-and-Matrix)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Linear Algebra
 
@@ -19,26 +16,37 @@ At the heart of many machine learning models are linear equations and transforma
 ## Connection between Linear Albegra and Machine Learning
 
 In image recognition, each pixel of an image can be represented as a vector, and the entire image as a matrix. Operations such as rotation, scaling, and translation of images are essentially linear transformations. 
+
 - Use Case: Facial recognition, object detection, medical imaging, and augmented reality.
 
 In natural language processing (NLP), linear algebra plays a crucial role in word embedding, where words or phrases from a vocabulary are mapped to vectors of real numbers.
 Words and sentences are represented as vectors (word embeddings like Word2Vec, GloVe, and transformers). Matrix operations enable efficient similarity computations and transformations.
+
 - Use Case: Chatbots, language translation, sentiment analysis, and speech recognition.
 
 In Recommendation systems, User-item interactions are stored in a matrix, where factorization methods (like **Singular Value Decomposition**, SVD) extract patterns for better recommendations.
+
 - Use Case: Netflix movie recommendations, e-commerce product suggestions, personalized advertising
 
 In Neural Networks & Deep Learning, Inputs, weights, and activations in neural networks are represented as matrices. The forward pass computes activations using matrix multiplications, and **backpropagation** optimizes weights using gradients.
+
 - Use Case: Autonomous vehicles, image classification, generative AI models (like GPT-based chatbots).
 
 For Optimization & Machine Learning Algorithms, **Gradient descent**, a key optimization technique, involves computing gradients using matrix operations. **Principal Component Analysis (PCA)** reduces dimensionality by finding optimal linear projections.
+
 - Use Case: Feature selection, anomaly detection, dimensionality reduction in big data.
 
 For Graph-Based Learning (Social Networks, Fraud Detection), Graphs are represented as adjacency matrices, allowing node relationships to be analyzed with **eigenvalues** and vector transformations.
+
 - Use Case: Fraud detection in transactions, influence analysis in social media networks, and recommender systems.
 
 For Time Series Analysis (Finance, Weather Forecasting), Autoregressive models and recurrent neural networks (RNNs) use matrix operations to process sequences of data efficiently.
+
 - Use Case: Stock market predictions, weather forecasting, predictive maintenance in industries.
+
+Vectors represent quantities in space, matrices organize multiple vectors, linear transformations manipulate vectors systematically, eigenvalues quantify scaling effects, eigenvectors define invariant directions, vector spaces provide a mathematical framework for transformations, and word embeddings leverage vector representations to capture semantic meaning — all forming the backbone of ML in optimization, feature extraction, and deep learning architectures.
+
+
 
 ## Vector and Matrix
 
