@@ -33,3 +33,6 @@ These are then converted into vectors by finding the appropriate row in the word
 For this reason, the embeddings produced by word2vec are called static. 
 These static embeddings form the basis for the so-called dynamic or contextual embeddings that are used in LLMs, which are made by adding context from the surrounding sentences or paragraphs to each word.
 
+
+
+https://medium.com/@bradneysmith/word-embeddings-with-word2vec-from-scratch-in-python-eb9326c6ab7c
