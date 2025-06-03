@@ -148,3 +148,5 @@ Inferential Statistics:
       - Assumptions of Linear Regression: Linearity, independence, homoscedasticity, normality.
       - Interpretation of Regression Coefficients: Explains predictor influence on the response variable.
       - Model Evaluation Metrics: R-squared, Adjusted R-squared, RMSE.
+- Bayesian Statistics: Bayesian statistics incorporate prior knowledge with current evidence to update beliefs.
+- Bayes' Theorem is a fundamental concept in probability theory that relates conditional probabilities. It is named after the Reverend Thomas Bayes, who first introduced the theorem. Bayes' Theorem is a mathematical formula that provides a way to update probabilities based on new evidence.
