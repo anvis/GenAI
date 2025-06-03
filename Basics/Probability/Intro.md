@@ -4,7 +4,7 @@
 - [Probability Counting](#Probability-Counting)
 - [Story Proofs](#Story-Proofs)
 - [Probability Algorithms](#Probability-Algorithms)
-- [Contributing](#contributing)
+- [Types of Statistics](#Types-of-Statistics)
 - [License](#license)
 
 
@@ -83,4 +83,68 @@ Monte Carlo methods are techniques for estimating probabilities through **random
 - Count how many fall inside the circle.  
 - The ratio gives an approximation of π.
 
-Let me know if you’d like more details or applications! 🚀
+## Types of Statistics
+
+There are commonly two types of statistics, which are discussed below:
+
+Descriptive Statistics: "De­scriptive Statistics" helps us simplify and organize big chunks of data. This makes large amounts of data easier to understand.
+
+Inferential Statistics: "Inferential Statistics" is a little different. It uses smaller data to draw conclusions about a larger group. It helps us predict and draw conclusions about a population.
+
+Descriptive Statistics:
+
+  Descriptive statistics summarize and describe the features of a dataset, providing a foundation for further statistical analysis.
+
+- Mean is calculated by summing all values present in the sample divided by total number of values present in the sample.
+- Median is the middle of a sample when arranged from lowest to highest or highest to lowest. in order to find the median, the data must be sorted.
+- Mode is the most frequently occurring value in the dataset.
+- Range: The difference between the maximum and minimum values.
+- Variance: The average squared deviation from the mean, representing data spread.
+- Standard Deviation: The square root of variance, indicating data spread relative to the mean.
+- Interquartile Range: The range between the first and third quartiles, measuring data spread around the median.
+- Skewness: Indicates data asymmetry.
+- Kurtosis: Measures the peakedness of the data distribution.
+- Covariance measures the degree to which two variables change together.
+- Correlation measures the strength and direction of the linear relationship between two variables. It is represented by correlation coefficient which ranges from -1 to 1. A positive correlation indicates a direct relationship, while a negative correlation implies an inverse relationship.
+- Histograms: Show data distribution.
+- Box Plots: Highlight data spread and potential outliers.
+- Scatter Plots: Illustrate relationships between variables.
+- Random Variables: Variables with random outcomes.
+- Probability Distributions: Describe the likelihood of different outcomes.
+- Binomial Distribution: Represents the number of successes in a fixed number of trials.
+- Poisson Distribution: Describes the number of events occurring within a fixed interval.
+- Normal Distribution: Characterizes continuous data symmetrically distributed around the mean.
+- Law of Large Numbers: States that as the sample size increases, the sample mean approaches the population mean.
+- Central Limit Theorem: Indicates that the distribution of sample means approximates a normal distribution as the sample size grows, regardless of the population's distribution.
+
+Inferential Statistics:
+
+  Inferential statistics involve making predictions or inferences about a population based on a sample of data.
+
+- Population: The entire group being studied.
+- Sample: A subset of the population used for analysis.
+- Point Estimation: Provides a single value estimate of a population parameter.
+- Interval Estimation: Offers a range of values (confidence interval) within which the parameter likely lies.
+- Confidence Intervals: Indicate the reliability of an estimate.
+- Hypothesis Testing
+    - Null and Alternative Hypotheses: The null hypothesis assumes no effect or relationship, while the alternative suggests otherwise.
+    - Type I and Type II Errors: Type I error is rejecting a true null hypothesis, while Type II is failing to reject a false null hypothesis.
+    - p-Values: Measure the probability of obtaining the observed results under the null hypothesis.
+    - t-Tests and z-Tests: Compare means to assess statistical significance.
+- ANOVA (Analysis of Variance): Compares means across multiple groups to determine if they differ significantly.
+- Chi-Square Tests: Assess the association between categorical variables.
+- Correlation and Regression:
+    Understanding relationships between variables is critical in machine learning.
+  
+    - Correlation:
+
+      - Pearson Correlation Coefficient: Measures linear relationship strength between two variables.
+      - Spearman Rank Correlation: Assesses the strength and direction of the monotonic relationship between variables.
+        
+    - Regression Analysis
+
+      - Simple Linear Regression: Models the relationship between two variables.
+      - Multiple Linear Regression: Extends to multiple predictors.
+      - Assumptions of Linear Regression: Linearity, independence, homoscedasticity, normality.
+      - Interpretation of Regression Coefficients: Explains predictor influence on the response variable.
+      - Model Evaluation Metrics: R-squared, Adjusted R-squared, RMSE.
