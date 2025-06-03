@@ -2,7 +2,7 @@
 
 ## Probability
 - [Probability Counting](#Probability-Counting)
-- [Story Proofs](#Story Proofs)
+- [Story Proofs](#Story-Proofs)
 - [Probability Algorithms](#Probability-Algorithms)
 - [Contributing](#contributing)
 - [License](#license)
