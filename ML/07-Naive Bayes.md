@@ -33,6 +33,9 @@ Basic probability, Bayes’ theorem.
 
 Naïve Bayes is a **probabilistic classifier** that predicts categories based on conditional probabilities.
 
+a probability-based algorithm that excels in classification tasks.
+
+
 ## How is it Used in Deep Learning AI GenAI
 
 - **Text Classification:** Used for spam filtering and sentiment analysis.
