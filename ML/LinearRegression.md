@@ -12,7 +12,9 @@
 
 Before modern computers, people relied on manual calculations to predict trends—economists, scientists, and statisticians plotted points on paper and estimated relationships. The problem was simple: **how do we predict future outcomes based on past data?** 
 
-For example, businesses wanted to forecast future sales based on past performance. Before machine learning, predictions were often done using simpler formulas or intuition, but errors were frequent. Now, Linear Regression makes this prediction easy by finding a mathematical relationship between variables.
+For example, businesses wanted to forecast future sales based on past performance. Before machine learning, predictions were often done using simpler formulas or intuition, but errors were frequent. 
+
+Now, Linear Regression makes this prediction easy by finding a mathematical relationship between variables.
 
 ## Prerequisites
 
