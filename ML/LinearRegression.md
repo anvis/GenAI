@@ -4,7 +4,7 @@
 - [Prerequisites](#Prerequisites)
 - [Working Mechanism](#Working-Mechanism)
 - [What is Linear Regression How Does It Work](#What-is-Linear-Regression-How-Does-It-Work)
-- [How is it Used in Deep Learning AI & GenAI](#How-is-it-Used-in-Deep-Learning-AI-&-GenAI)
+- [How is it Used in Deep Learning AI GenAI](#How-is-it-Used-in-Deep-Learning-AI-GenAI)
 - [Real World Example](#Real-World-Example)
 - [Explain It to a 10Year Old](#Explain-It-to-a-10Year-Old)
 
@@ -24,7 +24,7 @@ This project does XYZ...
 
 This project does XYZ...
 
-## How is it Used in Deep Learning AI & GenAI
+## How is it Used in Deep Learning AI GenAI
 
 This project does XYZ...
 
