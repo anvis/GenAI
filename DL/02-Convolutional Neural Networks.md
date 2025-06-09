@@ -19,6 +19,14 @@ CNNs specialize in processing images by identifying key patterns like edges, tex
 
 Instead of manually defining patterns, CNNs learn them by analyzing **thousands of labeled images**.
 
+- Specifically designed for **image processing** tasks.
+- Uses **convolutional layers** to automatically learn spatial hierarchies of patterns.
+- Each neuron is **locally connected** to a small region of the input, rather than fully connected.
+- Can detect edges, textures, and objects effectively.
+- Commonly used in **computer vision**, such as facial recognition and medical image analysis.
+
+
+
 ---
 
 ### **3. How is it Used in Deep Learning, AI, & GenAI?**
