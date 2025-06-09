@@ -19,6 +19,13 @@ RNNs are neural networks designed to handle **sequential** data by maintaining a
 
 This makes RNNs ideal for processing **words in a sentence, frames in a video, or steps in a financial trend**.
 
+- Designed for **sequential data** like time series or natural language.
+- Maintains memory across time steps, useful for **speech recognition and forecasting**.
+- 
+It doesn’t maintain memory for long sentences (30-50 words).it doesn’t have long term memory.
+Doesn’t have Memory gates.
+
+
 ---
 
 ### **3. How is it Used in Deep Learning, AI, & GenAI?**
