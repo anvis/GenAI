@@ -21,7 +21,7 @@ This makes RNNs ideal for processing **words in a sentence, frames in a video, o
 
 - Designed for **sequential data** like time series or natural language.
 - Maintains memory across time steps, useful for **speech recognition and forecasting**.
-- 
+  
 It doesn’t maintain memory for long sentences (30-50 words).it doesn’t have long term memory.
 Doesn’t have Memory gates.
 
