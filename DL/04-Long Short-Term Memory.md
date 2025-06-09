@@ -19,6 +19,12 @@ LSTMs are an advanced type of RNN that **control memory flow using gates**.
 
 By controlling memory with these gates, LSTMs **preserve important information over long sequences**.
 
+- An advanced version of RNN that **solves vanishing gradient issues**.
+- Uses special memory cells with gates (input, forget, and output) to store relevant information longer.
+- Ideal for **long-term dependencies**, like chatbot responses and predictive text.
+- It does maintain long term memory. 
+
+
 ---
 
 ### **3. How is it Used in Deep Learning, AI, & GenAI?**
