@@ -10,6 +10,8 @@ Seq2Seq typically consists of two core components:
 1. Encoder: This processes the input sequence (e.g., a sentence) and converts it into a fixed-size representation (context vector).
 2. Decoder: This takes the context vector and generates an output sequence, step by step.
 
+---
+
 ### **Key Mechanisms in Seq2Seq**
 
 - Recurrent Neural Networks (RNNs), LSTMs, GRUs: These architectures are often used for the encoder and decoder, helping to capture dependencies in sequential data.
@@ -17,10 +19,14 @@ Seq2Seq typically consists of two core components:
 - Teacher Forcing: During training, the true output (correct answer) is fed to the decoder to help guide learning.
 - Attention Mechanism: Helps overcome limitations by allowing the model to focus on specific parts of the input sequence at each step, improving long-sequence translation.
 
+---
+
 ### **Limitations & Evolution**
 
 - Traditional Seq2Seq models struggle with long-range dependencies due to vanishing gradients.
 - The Transformer architecture (which powers GPT, BERT, etc.) improves upon Seq2Seq by using self-attention to process sequences in parallel rather than sequentially.
+
+---
 
 These terms are fundamental to sequence-to-sequence (Seq2Seq) models, particularly in Natural Language Processing (NLP). Let’s break them down:
 
@@ -47,6 +53,7 @@ This drastically improves performance, especially for longer sentences and compl
 
 While Seq2Seq traditionally relied on RNN-based architectures, modern Transformer models (like BERT, T5, and GPT) have largely replaced them due to their efficiency and ability to handle longer sequences better with self-attention mechanisms.
 
+---
 
 Both Seq2Seq models and Transformer architectures are powerful frameworks used in natural language processing (NLP) and other sequential data tasks. Let’s break down their use cases:
 
@@ -60,6 +67,8 @@ The Sequence-to-Sequence (Seq2Seq) model is a type of neural network designed to
 - Question Answering Systems – Responding to user queries based on given context.
 
 However, traditional Seq2Seq models rely on RNNs, LSTMs, or GRUs, which have limitations in handling long-range dependencies due to vanishing gradients.
+
+---
 
 ### **Transformer Architecture Usage**
 
