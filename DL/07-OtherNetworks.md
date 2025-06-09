@@ -1,5 +1,12 @@
 
 
+Gated Recurrent Unit (GRU)
+- A simpler alternative to LSTM, with **fewer parameters and faster training**.
+- Commonly used in **speech recognition and translation**.
+- Uses only two gates (reset & update), making it computationally efficient.
+
+
+
 Radial Basis Function Neural Network (RBFNN)
 - Uses **radial basis functions** as activation functions.
 - Great for **function approximation and pattern recognition**.
