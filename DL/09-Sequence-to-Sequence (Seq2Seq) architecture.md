@@ -1,20 +1,24 @@
 
 
 Seq2Seq 
-The Sequence-to-Sequence (Seq2Seq) architecture is a type of neural network designed to handle input and output sequences of different lengths. It’s especially useful in tasks like machine translation, text summarization, and chatbot responses. Let’s break it down:
 
-How Seq2Seq Works
+The **Sequence-to-Sequence** (Seq2Seq) architecture is a type of neural network designed to handle input and output sequences of different lengths. It’s especially useful in tasks like machine translation, text summarization, and chatbot responses. Let’s break it down:
+
+### **How Seq2Seq Works**
+
 Seq2Seq typically consists of two core components:
 1. Encoder: This processes the input sequence (e.g., a sentence) and converts it into a fixed-size representation (context vector).
 2. Decoder: This takes the context vector and generates an output sequence, step by step.
 
-Key Mechanisms in Seq2Seq
+### **Key Mechanisms in Seq2Seq**
+
 - Recurrent Neural Networks (RNNs), LSTMs, GRUs: These architectures are often used for the encoder and decoder, helping to capture dependencies in sequential data.
 - Context Vector: A compressed representation of the input, which is passed to the decoder.
 - Teacher Forcing: During training, the true output (correct answer) is fed to the decoder to help guide learning.
 - Attention Mechanism: Helps overcome limitations by allowing the model to focus on specific parts of the input sequence at each step, improving long-sequence translation.
 
-Limitations & Evolution
+### **Limitations & Evolution**
+
 - Traditional Seq2Seq models struggle with long-range dependencies due to vanishing gradients.
 - The Transformer architecture (which powers GPT, BERT, etc.) improves upon Seq2Seq by using self-attention to process sequences in parallel rather than sequentially.
 
@@ -46,7 +50,8 @@ While Seq2Seq traditionally relied on RNN-based architectures, modern Transforme
 
 Both Seq2Seq models and Transformer architectures are powerful frameworks used in natural language processing (NLP) and other sequential data tasks. Let’s break down their use cases:
 
-Seq2Seq Model Usage
+### **Seq2Seq Model Usage**
+
 The Sequence-to-Sequence (Seq2Seq) model is a type of neural network designed to handle input sequences and generate output sequences of different lengths. It is widely used in:
 - Machine Translation – Converting text from one language to another (e.g., English → French).
 - Speech-to-Text – Converting spoken words into written form.
@@ -56,7 +61,8 @@ The Sequence-to-Sequence (Seq2Seq) model is a type of neural network designed to
 
 However, traditional Seq2Seq models rely on RNNs, LSTMs, or GRUs, which have limitations in handling long-range dependencies due to vanishing gradients.
 
-Transformer Architecture Usage
+### **Transformer Architecture Usage**
+
 The Transformer architecture, introduced in the paper *"Attention Is All You Need"*, solves many Seq2Seq limitations by leveraging a self-attention mechanism to process sequences in parallel rather than sequentially. It is used in:
 - Large Language Models (LLMs) – GPT, BERT, T5, etc., which power AI chatbots and text generation.
 - Machine Translation – More efficient translations compared to RNN-based Seq2Seq models.
