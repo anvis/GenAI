@@ -25,6 +25,11 @@ This makes RNNs ideal for processing **words in a sentence, frames in a video, o
 It doesn’t maintain memory for long sentences (30-50 words).it doesn’t have long term memory.
 Doesn’t have Memory gates.
 
+- Designed for **sequential data processing**, where order matters.
+- Has **recurrent connections**, allowing information to persist across time steps.
+- Ideal for **natural language processing (NLP)**, speech recognition, and time-series forecasting.
+- Struggles with **long-term dependencies** due to vanishing gradients, which led to variations like **LSTMs (Long Short-Term Memory) and GRUs (Gated Recurrent Units)**.
+
 
 ---
 
