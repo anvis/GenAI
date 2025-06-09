@@ -36,3 +36,10 @@ This prevents over-reliance on specific neurons and enhances generalization.
 
 Both techniques complement each other—batch normalization stabilizes training, while dropout ensures robustness. 
 
+### **Transfer Learning**
+
+- Instead of training a model from scratch, transfer learning allows you to use a pre-trained model (like ResNet, BERT, or GPT) and fine-tune it for your specific task.  
+- This is particularly useful when working with limited data, as the model has already learned useful features from large-scale datasets.  
+- You typically freeze earlier layers and train only the final layers, adapting the model for new tasks with minimal computation.
+
+
