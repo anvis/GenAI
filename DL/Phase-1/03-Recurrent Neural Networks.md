@@ -30,8 +30,37 @@ Doesn’t have Memory gates.
 - Ideal for **natural language processing (NLP)**, speech recognition, and time-series forecasting.
 - Struggles with **long-term dependencies** due to vanishing gradients, which led to variations like **LSTMs (Long Short-Term Memory) and GRUs (Gated Recurrent Units)**.
 
+---
+
+
+### **How RNN Works (Step-by-Step)**
+
+1. **Data Input (Sequence Processing)**  
+   - The network receives data **one step at a time** (e.g., words in a sentence or frames in a video).  
+   - Example: "Hello, how are you?"
+
+2. **Hidden State (Memory Mechanism)**  
+   - Each step remembers previous steps using a **hidden state**.  
+   - This allows the network to recognize **patterns over time**.  
+
+3. **Weight Sharing (Recursive Updates)**  
+   - Unlike standard neural networks, RNN **reuses the same weights** across all steps.  
+   - This helps maintain consistency in predictions.  
+
+4. **Loss Calculation (Error Measurement)**  
+   - The network predicts the next item in a sequence (e.g., the next word in a sentence).  
+   - If incorrect, a **loss function** calculates the difference between the prediction and actual output.  
+
+5. **Backpropagation Through Time (BPTT)**  
+   - The model adjusts weights using **gradient descent**.  
+   - **Reinforces correct sequences** while correcting mistakes.  
+
+6. **Iteration & Learning**  
+   - Over multiple training cycles, the RNN refines its ability to **predict sequences accurately**.  
+   - Example: Predicting missing words in a sentence or generating song lyrics.
 
 ---
+
 
 ### **3. How is it Used in Deep Learning, AI, & GenAI?**
 - **Speech Recognition:** Used in virtual assistants like Siri and Alexa.
