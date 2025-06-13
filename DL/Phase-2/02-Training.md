@@ -22,7 +22,7 @@ After training, it's essential to test the model on a separate dataset (holdout 
 
 ---
 
-###Steps 
+## Steps 
 
 1. **Forward Propagation:** The input data passes through multiple layers, each applying mathematical transformations. Neurons in each layer compute weighted sums and apply activation functions to make decisions.
 
