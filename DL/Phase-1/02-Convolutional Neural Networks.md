@@ -1,6 +1,8 @@
 
 **Convolutional Neural Networks (CNNs)**—the go-to algorithm for image recognition.
 
+CNNs **power self-driving cars, medical imaging, and even AI art generation**.
+
 ### **1. History & Problem it Solves**
 Before CNNs, computers **struggled** to understand images. Early image recognition relied on manually defining features like edges and textures, which was slow and inaccurate.
 
@@ -10,6 +12,8 @@ The problem? **How do we train computers to "see" like humans?** CNNs solved thi
 
 ### **2. What is a CNN & How Does It Work?**
 CNNs specialize in processing images by identifying key patterns like edges, textures, and shapes.
+
+A **Convolutional Neural Network (CNN)** is designed to process and understand visual data, making it a powerhouse for image recognition. Unlike traditional neural networks, CNNs **preserve spatial relationships** in images, meaning they recognize shapes, patterns, and textures effectively.
 
 - **Prerequisites:** Understanding of matrices, filters, and feature extraction.
 - **Working Mechanism:** 
@@ -25,9 +29,35 @@ Instead of manually defining patterns, CNNs learn them by analyzing **thousands 
 - Can detect edges, textures, and objects effectively.
 - Commonly used in **computer vision**, such as facial recognition and medical image analysis.
 
-
-
 ---
+
+### **How CNN Works (Step-by-Step)**
+
+1. **Convolution Layer (Feature Extraction)**  
+   - The image is passed through **filters** (kernels) that scan small portions of it.  
+   - These filters detect edges, textures, and patterns (e.g., eyes, corners of objects).  
+   - Output: A set of feature maps showing detected patterns.
+
+2. **Activation Function (ReLU)**  
+   - A **Rectified Linear Unit (ReLU)** is applied to introduce non-linearity.  
+   - It helps focus on **important features** while ignoring irrelevant ones.
+
+3. **Pooling Layer (Dimensionality Reduction)**  
+   - **Max pooling** or **average pooling** reduces the size of feature maps.  
+   - This speeds up computations and makes the network more efficient.
+
+4. **Fully Connected Layer (Classification Decision)**  
+   - After multiple convolution and pooling layers, flattened feature maps are fed into dense layers.  
+   - These layers determine the **final label** (e.g., "dog," "cat," or "car").
+
+5. **Softmax/Output Layer (Final Prediction)**  
+   - The last layer assigns **probabilities** to different classes.  
+   - Example:  
+     - "Dog: 85%"  
+     - "Cat: 10%"  
+     - "Car: 5%"  
+---
+
 
 ### **3. How is it Used in Deep Learning, AI, & GenAI?**
 - **Facial Recognition:** Used in unlocking phones and security systems.
