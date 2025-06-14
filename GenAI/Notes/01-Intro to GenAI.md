@@ -11,6 +11,8 @@
 ## What is GenAI?
 Generative AI is a type of artificial intelligence focused on the ability of computers to use models to create content like images, text, code, and synthetic data.
 
+Generative AI is an exciting field of artificial intelligence that opens the door to creating new and original content, spanning from written text to stunning visuals and even computer-generated music.
+
 The foundation of Generative AI applications are large language models (LLMs) and foundation models (FMs).
 
 Large Language Models (LLMs) are trained effectively on vast volumes of data and use billions of parameters, Then LLM's get the ability to generate original output for tasks like completing sentences, translating languages and answering questions etc.,
@@ -23,6 +25,15 @@ Image generation based on existing ones or utilizing the style of one image to m
 
 Speech oriented tasks such as translation, question/answer generation, and interpretation of the intent or meaning of text.
 
+### Types of Generative AI
+
+* **Text Generation**: This involves making computers write text that makes sense and is relevant to the topic, akin to an automatic storyteller.
+
+* **Image Generation**: This allows computers to make new pictures or change existing ones, like a digital artist using a virtual paintbrush.
+
+* **Code Generation**: This is Gen AI for programming, where the computer helps write new code.
+
+* **Audio Generation**: Computers can also create sounds or music, a bit like a robot composer coming up with its own tunes.
 
 ## AI vs GenAI vs AGI
 
