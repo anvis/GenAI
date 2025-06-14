@@ -46,6 +46,9 @@ Flow:
 3) With its pre-trained knowledge, the model analyzes the query. It uses the context and patterns it has learned during its training to understand how to address the task at hand.
 4) Finally, the model generates a response based on its understanding of the task.
     
+### **One-Shot Prompting**
+This technique involves giving the model a single example of the desired input-output relationship before asking it to generate a response. For instance, if you want the model to solve a math problem, you would first provide one example of a similar problem and its solution.
+
 ###  **Chain of Thought Prompting**
 This technique encourages the model to break down complex tasks into smaller, logical steps. By guiding the model to think through the problem, it can arrive at more accurate solutions.
     
