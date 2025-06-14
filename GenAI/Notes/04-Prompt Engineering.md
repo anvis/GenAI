@@ -52,6 +52,8 @@ This technique encourages the model to break down complex tasks into smaller, lo
 ###  **In-Context Learning**
 This method involves providing instructions or examples directly in the prompt, allowing the model to learn from the context provided.
 
+---
+
 ## Prompt Tuning
 
 Prompt tuning involves modifying the input prompts given to a foundation model to elicit better responses for a particular task. This technique focuses on optimizing the prompts rather than retraining the entire model.
@@ -60,6 +62,25 @@ Prompt tuning is a technique in generative AI which allows models to target spec
 
 Prompt tuning is a technique for optimizing AI model responses by adjusting prompts rather than modifying the model itself. Unlike fine-tuning, which updates model weights, prompt tuning refines how prompts interact with the model to improve accuracy and relevance.
 
+### **How Prompt Tuning Works**
+
+- Soft Prompt Initialization – Learnable prompts are introduced to guide the model.
+- Forward Pass & Loss Assessment – The model processes input with soft prompts and compares output to expected results.
+- Backpropagation & Refinement – Only the soft prompts are updated, not the entire model, ensuring efficient adaptation.
+
+### **Types of Prompt Tuning Techniques**
+
+- Chain-of-Thought Prompting (CoT) – Encourages step-by-step reasoning for complex tasks.
+- Self-Consistency Decoding – Generates multiple responses and selects the most frequent one.
+- Tree-of-Thought Prompting (ToT) – Explores multiple reasoning paths for diverse solutions.
+
+### **Why Prompt Tuning Matters**
+
+- Efficiency – Reduces computational cost compared to full model fine-tuning.
+- Adaptability – Allows models to specialize in tasks without retraining.
+- Improved Accuracy – Enhances response quality for specific applications
+
+---
 
 
    
