@@ -3,7 +3,7 @@
 ## Table of Contents
 - [Prompt Engineering](#Prompt-Engineering)
 - [Types of Prompts](#Types-of-Prompts)
-- [Usage](#usage)
+- [Prompt Tuning](#Prompt-Tuning)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -52,6 +52,13 @@ This technique encourages the model to break down complex tasks into smaller, lo
 ###  **In-Context Learning**
 This method involves providing instructions or examples directly in the prompt, allowing the model to learn from the context provided.
 
+## Prompt Tuning
+
+Prompt tuning involves modifying the input prompts given to a foundation model to elicit better responses for a particular task. This technique focuses on optimizing the prompts rather than retraining the entire model.
+
+Prompt tuning is a technique in generative AI which allows models to target specific tasks effectively. By crafting prompts, whether through a hands-on approach with hard prompts or through an automated process with soft prompts, we enhance the model's predictive capabilities.
+
+Prompt tuning is a technique for optimizing AI model responses by adjusting prompts rather than modifying the model itself. Unlike fine-tuning, which updates model weights, prompt tuning refines how prompts interact with the model to improve accuracy and relevance.
 
 
 
