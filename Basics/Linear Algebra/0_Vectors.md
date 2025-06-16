@@ -12,6 +12,14 @@ Vectors are not just mathematical abstractions; they represent quantities that h
 
 A vector is a mathematical object that has both magnitude and direction. In a geometric context, a vector can be visualized as an arrow pointing from one point to another in space. 
 
+The physics student perspective is that vectors are arrows pointing in space. What defines a given vector is its length and the direction it's pointing,	but as long as those two facts are the same, you can move it all around, and it's still the same vector. Vectors that live in the flat plane are two-dimensional, and those sitting in broader space that you and I live in are three-dimensional. 
+ 
+The computer science perspective is that vectors are ordered lists of numbers. For example, let's say you were doing some analytics about house prices, and the only features you cared about were square footage and price. You might model each house with a pair of numbers, the first indicating square footage and the second indicating price. Notice the order matters here. 
+ 
+In the lingo, you'd be modeling houses as two-dimensional vectors, where in this context, vector is pretty much just a fancy word for list, and what makes it two-dimensional is the fact that the length of that list is two.
+
+The mathematician, on the other hand, seeks to generalize both these views, basically saying that a vector can be anything where there's a sensible notion of adding two vectors and multiplying a vector by a number.
+
 ## Types of Vectors
 
 Vectors can be categorized into three types:
