@@ -18,6 +18,7 @@ are valuable for handling unique items and enabling efficient membership testing
 enable the storage of key-value pairs, facilitating quick data retrieval based on unique keys. This makes dictionaries essential for managing structured data, configurations, and any scenario where fast lookups are necessary.
 
 '''
+
 Creating a list of OS  
 os = ["Linux", "Windows", "MacOS"]  
 print(os)
