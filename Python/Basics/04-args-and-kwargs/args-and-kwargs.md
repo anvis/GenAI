@@ -57,6 +57,18 @@ Toppings ordered:
 - Useful **for passing optional or named parameters.**
 
 ``` python
+
+def orderPizza(size, *toppings, **details):
+    print(f"ordered pizza size: {size}, with toppings: {toppings} and details: {details}")    
+
+orderPizza("Large", "Pepperoni", "Mushrooms", "Onions", "Extra cheese", Delivery="Yes", Address="123 Main St")
+
+Output:
+ordered pizza size: Large, with toppings: ('Pepperoni', 'Mushrooms', 'Onions', 'Extra cheese') and details: {'Delivery': 'Yes', 'Address': '123 Main St'}
+
+```
+
+``` python
 def print_info(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
