@@ -28,12 +28,45 @@ def add_numbers(*args):
 print(add_numbers(1, 2, 3))  # Output: 6
 ```
 
+```python
+
+def orderPizza(size, *toppings):
+    print(f"Pizza size: {size}")
+    print(f"Number of toppings: {len(toppings)}")
+    print("Toppings ordered:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+orderPizza("Large", "Pepperoni", "Mushrooms", "Onions", "Extra cheese")
+
+output:
+Pizza size: Large
+Number of toppings: 4
+Toppings ordered:
+- Pepperoni
+- Mushrooms
+- Onions
+- Extra cheese
+
+```
 ---
 
  **kwargs – Keyword Variable Argument
 
 - Collects named arguments into a dictionary.
 - Useful **for passing optional or named parameters.**
+
+``` python
+
+def orderPizza(size, *toppings, **details):
+    print(f"ordered pizza size: {size}, with toppings: {toppings} and details: {details}")    
+
+orderPizza("Large", "Pepperoni", "Mushrooms", "Onions", "Extra cheese", Delivery="Yes", Address="123 Main St")
+
+Output:
+ordered pizza size: Large, with toppings: ('Pepperoni', 'Mushrooms', 'Onions', 'Extra cheese') and details: {'Delivery': 'Yes', 'Address': '123 Main St'}
+
+```
 
 ``` python
 def print_info(**kwargs):
