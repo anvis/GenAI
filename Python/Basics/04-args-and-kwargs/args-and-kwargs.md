@@ -1,6 +1,22 @@
 
 In Python, *args and **kwargs are used to make functions more flexible by allowing them to accept variable numbers of arguments.
 
+---
+
+``` python
+nums = [1,2,3,4,5]
+
+print(nums)
+
+print(*nums)  # Unpacking the list
+
+output
+
+[1, 2, 3, 4, 5]
+1 2 3 4 5
+```
+---
+
 🧵 *args – Non-keyword Variable Argument
 
 - Collects positional arguments into a tuple.
