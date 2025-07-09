@@ -3,6 +3,11 @@ In Python, *args and **kwargs are used to make functions more flexible by allowi
 
 ---
 
+🧵 *args – Non-keyword Variable Argument
+
+- Collects positional arguments into a tuple.
+- Useful **when you don’t know how many arguments will be passed.**
+
 ``` python
 nums = [1,2,3,4,5]
 
@@ -15,12 +20,6 @@ output
 [1, 2, 3, 4, 5]
 1 2 3 4 5
 ```
----
-
-🧵 *args – Non-keyword Variable Argument
-
-- Collects positional arguments into a tuple.
-- Useful **when you don’t know how many arguments will be passed.**
 
 ``` python
 def add_numbers(*args):
