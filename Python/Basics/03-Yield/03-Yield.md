@@ -1,10 +1,5 @@
 
 
-https://www.youtube.com/watch?v=HnggP09mKpM
-
-
-https://www.geeksforgeeks.org/python/python-yield-keyword/
-
 
 The yield keyword in Python is used to create generator functions. Generator functions are a special type of function that, when called, return a generator object instead of a single value. This generator object can then be iterated over to produce a sequence of values one at a time, on demand. 
 
@@ -122,4 +117,7 @@ This avoids loading all embeddings into memory at once—great for scalability.
 
 ---
 
+https://www.youtube.com/watch?v=HnggP09mKpM
 
+
+https://www.geeksforgeeks.org/python/python-yield-keyword/
