@@ -39,6 +39,15 @@ def orderPizza(size, *toppings):
 
 orderPizza("Large", "Pepperoni", "Mushrooms", "Onions", "Extra cheese")
 
+output:
+Pizza size: Large
+Number of toppings: 4
+Toppings ordered:
+- Pepperoni
+- Mushrooms
+- Onions
+- Extra cheese
+
 ```
 ---
 
