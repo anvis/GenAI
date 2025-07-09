@@ -28,6 +28,18 @@ def add_numbers(*args):
 print(add_numbers(1, 2, 3))  # Output: 6
 ```
 
+```python
+
+def orderPizza(size, *toppings):
+    print(f"Pizza size: {size}")
+    print(f"Number of toppings: {len(toppings)}")
+    print("Toppings ordered:")
+    for topping in toppings:
+        print(f"- {topping}")
+
+orderPizza("Large", "Pepperoni", "Mushrooms", "Onions", "Extra cheese")
+
+```
 ---
 
  **kwargs – Keyword Variable Argument
