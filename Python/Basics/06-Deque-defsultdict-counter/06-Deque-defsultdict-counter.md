@@ -29,6 +29,36 @@ deque([0, 1, 2, 3])
 deque([1, 2, 3])
 
 ```
+
+```python
+
+print("----deque with more operations----")
+dq.rotate() # Rotate right by 1
+print(dq)  
+dq.extend([5, 6])    # Add multiple elements to the right
+print(dq)  
+dq.rotate()
+print(dq)
+dq.extendleft([-1, -2])  # Add multiple elements to the left (reversed order)
+print(dq)  
+dq.rotate(-2)  # Rotate left by 2
+print(dq)  # Final state of deque
+dq.rotate(3)  # Rotate right by 3
+print(dq)  # Final state of deque after another rotation
+
+Output:
+
+----deque with more operations----
+deque([3, 1, 2])
+deque([3, 1, 2, 5, 6])
+deque([6, 3, 1, 2, 5])
+deque([-2, -1, 6, 3, 1, 2, 5])
+deque([6, 3, 1, 2, 5, -2, -1])
+deque([5, -2, -1, 6, 3, 1, 2])
+
+```
+
+
 ---
 
 🧩 defaultdict: Dictionary with Default Factory
