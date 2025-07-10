@@ -4,11 +4,37 @@
 - Use Case: Ideal for implementing queues, stacks, or sliding windows.
 -  Supports rotation (dq.rotate(n)) and max length (deque(iterable, maxlen)).
 
+```python
+
+from collections import deque
+
+dq = deque([1, 2, 3])
+print(dq)  # deque([1, 2, 3])
+dq.append(4)         # Add to right
+print(dq) 
+dq.appendleft(0)     # Add to left
+print(dq) 
+dq.pop()             # Remove from right
+print(dq) 
+dq.popleft()         # Remove from left
+print(dq)
+
+Output:
+
+----deque----
+deque([1, 2, 3])
+deque([1, 2, 3, 4])
+deque([0, 1, 2, 3, 4])
+deque([0, 1, 2, 3])
+deque([1, 2, 3])
+
+```
 ---
 
 🧩 defaultdict: Dictionary with Default Factory
 - Purpose: Automatically creates default values for missing keys.
 - Use Case: Great for grouping, counting, or building nested structures.
+- Ideal for handling missing keys by providing default values. It simplifies code that requires initializing dictionary entries.
 
 defaultdict is a subclass of dict that provides a default value for a nonexistent key, avoiding KeyError.
 It requires a callable (like list, int, or a custom function) to initialize the default value.
@@ -63,12 +89,12 @@ defaultdict(<class 'int'>, {'count': 1})
 
 ```
 
-
 ---
 
 🔢 Counter: Frequency Tally
 - Purpose: Counts occurrences of hashable items.
 - Use Case: Perfect for NLP token frequency, histogram generation, or voting systems.
+- Best for counting occurrences of items. It provides methods like most_common and supports arithmetic operations.
 
 Counter is a subclass of dict designed for counting hashable objects. 
 It stores elements as dictionary keys and their counts as dictionary values.
