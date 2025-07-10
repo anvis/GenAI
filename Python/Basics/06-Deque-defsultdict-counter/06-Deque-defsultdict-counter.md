@@ -4,6 +4,7 @@
 - Use Case: Ideal for implementing queues, stacks, or sliding windows.
 -  Supports rotation (dq.rotate(n)) and max length (deque(iterable, maxlen)).
 
+---
 
 🧩 defaultdict: Dictionary with Default Factory
 - Purpose: Automatically creates default values for missing keys.
@@ -29,7 +30,8 @@ for char in 'mississippi':
 print(char_count)
 
 Output:
-defaultdict(<class 'list'>, {'a': ['apple', 'ape'], 'b': ['banana', 'butter'], 'c': ['cherry'], 'd': ['date'], 'e': ['elderberry'], 'f': ['fig'], 'g': ['grape']})
+defaultdict(<class 'list'>, {'a': ['apple', 'ape'], 'b': ['banana', 'butter'], 'c': ['cherry'],
+'d': ['date'], 'e': ['elderberry'], 'f': ['fig'], 'g': ['grape']})
 defaultdict(<class 'int'>, {'m': 1, 'i': 4, 's': 4, 'p': 2})
 ```
 
