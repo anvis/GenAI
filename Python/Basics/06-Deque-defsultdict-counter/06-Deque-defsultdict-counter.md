@@ -144,3 +144,12 @@ most_common_words = word_count.most_common(2)
 print(most_common_words) # Output: [('blue', 3), ('red', 2)]
 
 ```
+
+
+🧠 When to Use What?
+| Collection | Best For | Auto Handling | Performance | 
+| deque | Queues, stacks, sliding windows | Ends of list | Fast O(1) | 
+| defaultdict | Grouping, nested dicts | Missing keys | Clean logic | 
+| Counter | Frequency analysis | Counting items | Built-in ops | 
+
+
