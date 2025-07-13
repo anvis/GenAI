@@ -1,4 +1,3 @@
----
 
 ## 🧠 What Is `ndarray`?
 
@@ -65,15 +64,3 @@ print(t.shape)  # (2, 2, 2)
 | Scalar    | Loss value, learning rate                       |
 
 ---
-
-## 🧠 Bonus: Transpose & Reshape
-
-```python
-# Transpose a matrix
-m.T
-
-# Reshape a tensor
-t.reshape(4, 2)
-```
-
-These operations are vital for aligning dimensions in neural networks and attention mechanisms.
