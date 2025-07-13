@@ -39,11 +39,11 @@ print("# Create a dictionary to be pickled")
 
 data = {'name': 'Banana', 'color': 'Yellow'}
 # Serialize the dictionary to a binary format
-with open(basePath + 'data.pkl', 'wb') as file:
+with open(basePath + '/data.pkl', 'wb') as file:
     pickle.dump(data, file)
-    
+
 # Deserialize the dictionary from the binary format
-with open(basePath + 'data.pkl', 'rb') as file:
+with open(basePath + '/data.pkl', 'rb') as file:
     loaded_data = pickle.load(file)
 # Access the data
 print(loaded_data)
