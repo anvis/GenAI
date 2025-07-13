@@ -13,6 +13,9 @@ The pickle module in Python is a powerful tool for serializing and deserializing
 - Deserialization (Unpickling): Reconstructs the original object from the byte stream.
 - Useful for saving objects to disk, sending them over a network, or storing in databases.
 - Unlike JSON, pickle uses a binary format.
+- Pickle is ideal for saving Python-specific objects like classes, functions, and complex data structures.
+- It’s simpler than JSON for internal use but not safe for external data exchange.
+
 
  ---
 
@@ -38,9 +41,17 @@ data = {'name': 'Anvesh', 'role': 'AI Engineer'}
 with open('data.pkl', 'wb') as f:
     pickle.dump(data, f)
 
+wb = Write Binary
+pickle.dump = writes the object to a file
+
+
 # Unpickling
 with open('data.pkl', 'rb') as f:
     loaded_data = pickle.load(f)
+
+rb = Read Binary
+pickle.load = restores the object
+
 
 print(loaded_data)
 ```
