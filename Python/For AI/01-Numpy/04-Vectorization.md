@@ -9,6 +9,11 @@ Vectorization in NumPy is a technique that allows you to perform **operations on
 - **Powered by**: NumPy’s underlying C implementation.
 - **Benefit**: Massive speedup and cleaner code.
 
+- Vectorization is about speed and loop elimination.
+- Broadcasting is about shape compatibility and memory efficiency.
+- They often work together: broadcasting enables vectorized operations on arrays of different shapes
+
+
 🔗 [AskPython’s guide to vectorization](https://www.askpython.com/python-modules/numpy/vectorization-numpy)  
 🔗 [GeeksforGeeks practical examples](https://www.geeksforgeeks.org/numpy/vectorized-operations-in-numpy/)
 
