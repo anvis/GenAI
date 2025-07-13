@@ -43,6 +43,7 @@ with open('data.pkl', 'wb') as f:
 
 wb = Write Binary
 pickle.dump = writes the object to a file
+This will actually cretes a file in folder.
 
 
 # Unpickling
@@ -51,6 +52,7 @@ with open('data.pkl', 'rb') as f:
 
 rb = Read Binary
 pickle.load = restores the object
+This will read the file from folder to internal memory.
 
 
 print(loaded_data)
