@@ -10,6 +10,13 @@
 - [License](#license)
 
 ## What is LLM
+
+A Large Language Model is an artificial intelligence model designed to understand and generate human-like text. It is “large” because of the massive number of parameters (think of them as internal “knobs” the model can adjust to learn patterns in language) — often in the billions or trillions.
+
+LLMs are trained on vast amounts of text from books, websites, code, scientific papers, and more. Once trained, they can predict and generate coherent responses based on a given prompt.
+
+Analogy: Think of an LLM as a super-smart autocomplete on steroids. Just like your phone guesses the next word you want to type, an LLM predicts and generates sequences of words — but with deep knowledge of grammar, facts, style, and even reasoning.
+
 Large Language Models (LLMs): These are deep learning models (part of generative AI) trained on vast amounts of text data to understand and generate human-like language. Examples include GPT-3, GPT-4, or other transformer-based architectures. LLMs are the backbone of conversational AI agents. Typically built using **Transformer networks** (e.g., GPT, BERT, LLaMA), Pre-trained on massive text datasets and fine-tuned for specific tasks. LLM use cases are Conversational AI (chatbots, assistants like Copilot), Text generation & summarization (writing articles, responses) , Code generation & programming help. LLM are machine learning models that use deep learning algorithms to understand the natural language.
 
 As models are built bigger and bigger, their complexity and efficacy increases. Early language models could predict the probability of a single word; modern large language models can predict the probability of sentences, paragraphs, or even entire documents.
