@@ -64,25 +64,25 @@ RAG works in three stages:
 
 ## Types of RAG
 
-Standard RAG is a basic system where documents are broken into pieces, and the most relevant sections are retrieved to answer queries using a language model. It follows a simple three-step process: indexing, retrieval, and generation, and uses basic measures for finding matching text. This approach works for Q&A systems and chatbots that answer common questions. For example, a university FAQ chatbot can pull relevant info from academic guidelines to assist students.
+**Standard RAG** is a basic system where documents are broken into pieces, and the most relevant sections are retrieved to answer queries using a language model. It follows a simple three-step process: indexing, retrieval, and generation, and uses basic measures for finding matching text. This approach works for Q&A systems and chatbots that answer common questions. For example, a university FAQ chatbot can pull relevant info from academic guidelines to assist students.
 
-Advanced RAG improves on Standard RAG by adding steps before and after retrieving information, like rewriting queries and re-ranking documents. This method ensures better quality and accuracy, making it suitable for areas like healthcare and legal applications. A healthcare chatbot exemplifies this use case, refining queries and pulling the latest guidelines to provide trustworthy answers.
+**Advanced RAG** improves on Standard RAG by adding steps before and after retrieving information, like rewriting queries and re-ranking documents. This method ensures better quality and accuracy, making it suitable for areas like healthcare and legal applications. A healthcare chatbot exemplifies this use case, refining queries and pulling the latest guidelines to provide trustworthy answers.
 
-Modular RAG separates the retrieval and generation processes into independent modules, allowing more flexibility and customization. This is ideal for large enterprises that need different solutions for various departments, like customer support platforms using specific modules for technical and billing inquiries.
+**Modular RAG** separates the retrieval and generation processes into independent modules, allowing more flexibility and customization. This is ideal for large enterprises that need different solutions for various departments, like customer support platforms using specific modules for technical and billing inquiries.
 
-Corrective RAG includes feedback mechanisms to cross-check answers against trusted sources, enhancing accuracy and reducing misinformation. It's useful in high-stakes fields such as legal research, where verification is critical. A legal research assistant checking its summaries against databases illustrates this approach.
+**Corrective RAG** includes feedback mechanisms to cross-check answers against trusted sources, enhancing accuracy and reducing misinformation. It's useful in high-stakes fields such as legal research, where verification is critical. A legal research assistant checking its summaries against databases illustrates this approach.
 
-Speculative RAG addresses uncertainty by offering educated guesses when data is incomplete, signaling to users that these answers are not confirmed facts. It serves exploratory research and brainstorming sessions, as seen in a market research tool proposing emerging industry trends.
+**Speculative RAG** addresses uncertainty by offering educated guesses when data is incomplete, signaling to users that these answers are not confirmed facts. It serves exploratory research and brainstorming sessions, as seen in a market research tool proposing emerging industry trends.
 
-Fusion RAG combines multiple data sources to provide comprehensive answers and reduce biases. This is useful for complex decision-making, such as a financial advisory tool that merges market data with expert insights for investment advice.
+**Fusion RAG** combines multiple data sources to provide comprehensive answers and reduce biases. This is useful for complex decision-making, such as a financial advisory tool that merges market data with expert insights for investment advice.
 
-Agentic RAG allows the model to autonomously decide what additional information is needed, improving the answer through iterative queries. This is beneficial for interactive assistants, like a virtual research assistant refining its responses to complex questions.
+**Agentic RAG **allows the model to autonomously decide what additional information is needed, improving the answer through iterative queries. This is beneficial for interactive assistants, like a virtual research assistant refining its responses to complex questions.
 
-Self RAG incorporates self-assessment, where the model evaluates and adjusts its responses against retrieved data. This method is suitable for educational platforms, resembling an AI math tutor that reviews its solutions against verified methods.
+**Self RAG** incorporates self-assessment, where the model evaluates and adjusts its responses against retrieved data. This method is suitable for educational platforms, resembling an AI math tutor that reviews its solutions against verified methods.
 
-Graph RAG utilizes knowledge graphs to understand the relationships between information, enhancing context in retrieval. It's valuable in legal and scientific research, exemplified by a legal assistant that shows interrelations among case documents for richer responses.
+**Graph RAG** utilizes knowledge graphs to understand the relationships between information, enhancing context in retrieval. It's valuable in legal and scientific research, exemplified by a legal assistant that shows interrelations among case documents for richer responses.
 
-RadioRAG focuses on real-time data retrieval in specialized fields, crucial for time-sensitive situations. For example, a radiology support tool pulls the latest research to assist in decision-making regarding diagnoses.
+**Radio RAG **focuses on real-time data retrieval in specialized fields, crucial for time-sensitive situations. For example, a radiology support tool pulls the latest research to assist in decision-making regarding diagnoses.
 
 ---
 
