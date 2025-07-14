@@ -76,13 +76,13 @@ RAG works in three stages:
 
 **Fusion RAG** combines multiple data sources to provide comprehensive answers and reduce biases. This is useful for complex decision-making, such as a financial advisory tool that merges market data with expert insights for investment advice.
 
-**Agentic RAG **allows the model to autonomously decide what additional information is needed, improving the answer through iterative queries. This is beneficial for interactive assistants, like a virtual research assistant refining its responses to complex questions.
+**Agentic RAG** allows the model to autonomously decide what additional information is needed, improving the answer through iterative queries. This is beneficial for interactive assistants, like a virtual research assistant refining its responses to complex questions.
 
 **Self RAG** incorporates self-assessment, where the model evaluates and adjusts its responses against retrieved data. This method is suitable for educational platforms, resembling an AI math tutor that reviews its solutions against verified methods.
 
 **Graph RAG** utilizes knowledge graphs to understand the relationships between information, enhancing context in retrieval. It's valuable in legal and scientific research, exemplified by a legal assistant that shows interrelations among case documents for richer responses.
 
-**Radio RAG **focuses on real-time data retrieval in specialized fields, crucial for time-sensitive situations. For example, a radiology support tool pulls the latest research to assist in decision-making regarding diagnoses.
+**Radio RAG** focuses on real-time data retrieval in specialized fields, crucial for time-sensitive situations. For example, a radiology support tool pulls the latest research to assist in decision-making regarding diagnoses.
 
 ---
 
