@@ -3,8 +3,8 @@
 - [What is RAG](#What-is-RAG)
 - [How RAG Works](#How-RAG-Works)
 - [Limitations of LLM](#Limitations-of-LLM)
-- [Why Should We Use RAG?][#Why-Should-We-Use-RAG?]
-- [Types of RAG][#Types-of-RAG]
+- [Why Should We Use RAG?](#Why-Should-We-Use-RAG?)
+- [Types of RAG](#Types-of-RAG)
 - [RAG vs CAG](#RAG-vs-CAG)
 - [How CAG Works](#How-CAG-Works)
 
