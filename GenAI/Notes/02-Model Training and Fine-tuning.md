@@ -47,5 +47,17 @@ RLHF optimizes an LLM based on feedback from human reviewers, helping align its 
     - Training a reward model that learns from human preferences.
     - Using reinforcement learning (e.g., Proximal Policy Optimization) to adjust the LLM’s behavior accordingly.
 
-   
+
+
+   ---
+
+
+The core idea remains:
+✅ Start with general language ability →
+✅ Add instruction-following →
+✅ Align with human preferences →
+✅ Optimize helpfulness, honesty, and harmlessness
+
+Tools used often include PyTorch, TensorFlow, Hugging Face Transformers, DeepSpeed, and frameworks like Megatron-LM.
+
 
