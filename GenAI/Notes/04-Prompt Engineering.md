@@ -8,7 +8,26 @@
 - [License](#license)
 
 ## Prompt Engineering
-This project does XYZ...
+
+**Your prompts define the LLM’s behavior**
+
+It’s how we turn raw model capabilities into real-world functionality. A small change in phrasing can significantly alter the output — making prompt design both powerful and delicate.
+
+
+In production environments, poor prompts result in:
+
+- Hallucinated or vague answers
+- Inconsistent formats
+- Missed tasks and user frustration
+- Higher token usage and latency
+  
+Effective prompts result in:
+
+- Clear, structured, accurate outputs
+- Predictable, robust behavior
+- Lower costs and better user experience
+
+
 
 https://developers.google.com/machine-learning/resources/prompt-eng
 
@@ -19,10 +38,42 @@ https://medium.com/the-generator/the-perfect-prompt-prompt-engineering-cheat-she
 
 ## Types of Prompts
 
+### **Instruction-Based Prompts**
+
+Use when: You want the model to perform a clear task (summarize, translate, analyze, etc.)
+
+Summarize the following meeting transcript into 3 concise bullet points.
+
+```
+Yesterday's meeting included updates on the marketing campaign...
+```
+
+### **Role-Based Prompts**
+
+Use when: You want the model to adopt a tone, domain knowledge, or point of view.
+
+```
+You are a senior software engineer. Explain the concept of async/await in Python to a beginner developer.
+```
+
  ### **Few-Shot Prompting**
+
+Use when: You want to guide behavior with examples.
+ 
 Providing a few examples within the prompt helps the model learn the desired format or style of response. This technique can improve the model's accuracy by showing it patterns to follow.
 
-Few Short Prompting is a technique in artificial intelligence (AI) where model learn to perform tasks with very few examples reducing the need for large datasets. It falls under Few Shot Learning (FSL) which enables models to adapt quickly to new tasks with minimal data making it particularly useful in situations with limited data.
+Few Short Prompting is a technique in artificial intelligence (AI) where model learn to perform tasks with very few examples reducing the need for large datasets. 
+
+It falls under Few Shot Learning (FSL) which enables models to adapt quickly to new tasks with minimal data making it particularly useful in situations with limited data.
+
+```
+Convert the following product reviews into sentiment labels (Positive, Negative, Neutral):
+
+Review: "The battery life is great!"  
+Sentiment: Positive
+Review: "It stopped working after a week."  
+Sentiment:
+```
 
 Flow: 
 1) User asks Query.
@@ -50,7 +101,40 @@ Flow:
 This technique involves giving the model a single example of the desired input-output relationship before asking it to generate a response. For instance, if you want the model to solve a math problem, you would first provide one example of a similar problem and its solution.
 
 ###  **Chain of Thought Prompting**
-This technique encourages the model to break down complex tasks into smaller, logical steps. By guiding the model to think through the problem, it can arrive at more accurate solutions.
+This technique encourages the model to break down complex tasks into smaller, logical steps.
+By guiding the model to think through the problem, it can arrive at more accurate solutions.
+
+```
+Q: Jane has 5 red balloons and gives away 2. How many does she have left?  
+A: Let's think step by step.
+```
+
+- Use cues like: Let’s think step by step, Show your reasoning, Break it down
+- Chain-of-thought improves performance on reasoning, problem-solving, and planning tasks
+
+###  **Structured Output Prompts**
+
+Use when: You need the output in a machine-readable format (JSON, YAML, tables).
+
+```
+Extract the following information in JSON format:  
+1. Event name  
+2. Date  
+3. Location
+
+"""
+Join us for AI Summit 2025 on June 2nd in Berlin at the City Conference Center.
+"""
+
+Output:
+
+{
+ "event_name": "AI Summit 2025",
+ "date": "June 2nd, 2025",
+ "location": "City Conference Center, Berlin"
+ }
+
+```
     
 ###  **In-Context Learning**
 This method involves providing instructions or examples directly in the prompt, allowing the model to learn from the context provided.
