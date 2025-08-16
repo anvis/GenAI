@@ -27,8 +27,8 @@ Step 3: Calculate the average of the squared differences of the given values, wh
 Types of Variance
 We can define the variance of the given data in two types,
 
--- Variance for Population
--- Variance for Sample
+- Variance for Population
+- Variance for Sample
 
 **Population variance**
 
