@@ -13,7 +13,7 @@ data = [4, 8, 6, 5, 3]
 
 = {4 + 8 + 6 + 5 + 3}/{5} ==> 26/5 ==> 5.2
 
-**Variance **
+**Variance**
 
 To Calculate Variance, first get Deviation from Mean, Square each deviation, and calulate variance
 
@@ -48,5 +48,6 @@ print(f"Variance: {variance}")
 print(f"Standard Deviation: {std_dev}")
 
 ```
+
 
 
