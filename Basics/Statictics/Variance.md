@@ -7,9 +7,9 @@ A higher variance indicates greater variability, meaning the data is spread, whi
 
 <img width="726" height="352" alt="image" src="https://github.com/user-attachments/assets/401a335a-0fc7-4898-8587-b615428e72b0" />
 
--- It shows the probability density across different standard deviations (σ) from the mean, with the curve becoming wider as variance increases and narrower as variance decreases.
--- The image highlights key areas, where 68.2% of the data falls within ±1 standard deviation, 95.4% within ±2, and 99.7% within ±3, following the Empirical Rule.
--- The larger the variance (σ²), the more spread out the data, making the curve flatter.
+- It shows the probability density across different standard deviations (σ) from the mean, with the curve becoming wider as variance increases and narrower as variance decreases.
+- The image highlights key areas, where 68.2% of the data falls within ±1 standard deviation, 95.4% within ±2, and 99.7% within ±3, following the Empirical Rule.
+- The larger the variance (σ²), the more spread out the data, making the curve flatter.
 
 ---
 
