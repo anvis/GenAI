@@ -37,6 +37,7 @@ formatted_prompt = extraction_prompt.format(
 
 structured_profile = llm.invoke(formatted_prompt)
 parsed_profile = parser.parse(structured_profile.content)
+print("parsed_profile")
 print(parsed_profile)
 
 ##--

@@ -1,6 +1,8 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from Common import Config
 from langchain.prompts.chat import ChatPromptTemplate
+from langchain_core.language_models.chat_models import ChatModel
+
 
 class llm:
     _systemText = "Default Name"
@@ -31,7 +33,10 @@ class llm:
         return llm
 
     
-    
+    def get_Gemini_ChatModel(modelName="gemini-2.0-flash") -> ChatModel:
+    # Initialize Gemini model
+        llm = ChatGoogleGenerativeAI(model=modelName, temperature=0,max_tokens=None)
+        return llm
 
 
 
