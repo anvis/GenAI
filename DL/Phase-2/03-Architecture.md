@@ -118,6 +118,12 @@ If you're thinking modular agent design, you could imagine:
 - Generator creates data, Discriminator evaluates it
 - Ideal for: Image synthesis, data augmentation, style transfer
 
+GANs are designed to generate new data that mimics a given distribution. They consist of two neural networks locked in a game:
+- Generator (G): Takes random noise and tries to produce realistic data (e.g., images, text).
+- Discriminator (D): Evaluates whether the data is real or fake.
+  
+They train by competing: the generator improves to fool the discriminator, and the discriminator improves to catch the generator’s fakes.
+
 #### 7. **Radial Basis Function Networks (RBF)**
 - Uses radial basis functions as activation
 - Good for interpolation and function approximation
@@ -131,6 +137,22 @@ If you're thinking modular agent design, you could imagine:
 - Operates on graph-structured data
 - Learns node, edge, and graph-level representations
 - Ideal for: Social networks, recommendation systems, molecule modeling
+
+GNNs are designed to learn from graph-structured data, where relationships between entities matter. Each node aggregates information from its neighbors using graph convolutions.
+- Nodes = entities (e.g., users, molecules)
+- Edges = relationships (e.g., friendships, chemical bonds)
+Variants include GCN (Graph Convolutional Network), GAT (Graph Attention Network), and MPNN (Message Passing Neural Network).
+
+Use Cases:
+- Social network analysis
+- Fraud detection
+- Recommendation systems
+- Molecular property prediction
+Strengths:
+- Captures relational and structural dependencies
+- Works on non-Euclidean data
+- Scales well to large, sparse graphs
+
 
 #### 10. **Neural Ordinary Differential Equations (Neural ODEs)**
 - Treats hidden states as continuous-time dynamics
