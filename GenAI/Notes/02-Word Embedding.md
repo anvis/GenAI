@@ -69,6 +69,10 @@ fish  → [0.30, 0.60, -0.10]
 ```
 Notice that "cat" and "dog" have similar values because they are semantically related.
 
+<img width="615" height="460" alt="image" src="https://github.com/user-attachments/assets/1597aaaa-08ec-486a-b473-64b71cedb534" />
+
+
+
 #### **Pros:**
 ✅ Captures semantic meaning (words like "king" and "queen" are closer)  
 ✅ Lower dimensionality and computational efficiency  
