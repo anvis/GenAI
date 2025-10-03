@@ -17,3 +17,13 @@ Unsupervised algorithms do not need to be trained with desired outcome data. Ins
 
 **Autoencoders**: Used for feature learning and anomaly detection (e.g., detecting fraudulent transactions).
 
+---
+
+***types***
+
+**Clustering** : Clustering is nothing but general grouping of data,
+- All cats and dogs images into different groups.
+- News Articles based on Political, Sports.
+- Customer with simlar Buying Choice.
+
+
