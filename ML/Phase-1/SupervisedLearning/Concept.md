@@ -12,3 +12,17 @@ Examples Include:
 - Weather Forecast
 - Stock Price
 - 
+
+In supervised learning, we have labeled data—meaning we know the correct answers. The model learns by mapping inputs to known outputs.
+
+Supervised algorithms require humans to provide both input and desired output,
+
+**Linear Regression**: Used for predicting continuous values (e.g., stock prices, house prices).
+
+**Logistic Regression**: Used for binary classification problems (e.g., spam detection, fraud detection).
+
+**Decision Trees & Random Forests**: Used for classification and regression tasks (e.g., customer segmentation, recommendation systems).
+
+**Support Vector Machines (SVM)**: Great for text classification or image recognition when data is well-separated.
+
+**Neural Networks** (ANNs, CNNs, RNNs): Used for complex tasks like image recognition (CNNs) or language translation (RNNs).
