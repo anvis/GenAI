@@ -19,11 +19,21 @@ Unsupervised algorithms do not need to be trained with desired outcome data. Ins
 
 ---
 
-***types***
+***Types***
 
 **Clustering** : Clustering is nothing but general grouping of data,
 - All cats and dogs images into different groups.
 - News Articles based on Political, Sports.
 - Customer with simlar Buying Choice.
+
+***Dimentionality Reduction***: We reduce the data points / features, so that our training would be faster, less compution power, No Duplicate information to process, remove unwanted data, etc.., End goal is to have only relavent information for a model to train and gain accuracy.
+
+We reduce number of dimenstions of features.
+
+***Association Mining***: Also called as Association Rule Learning, where we find out exact relationships such as If a customer did this, he would be doing this.
+To find out how exactly the attributes were related. We find out the rules.
+
+If customer is buying a phone, likely to buy phone cover.
+
 
 
