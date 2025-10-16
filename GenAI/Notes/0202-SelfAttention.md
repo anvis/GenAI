@@ -92,6 +92,12 @@ This process enables deep contextual understanding, making embeddings highly eff
 
 ## Understand Self Attention Mechanism
 
+Self-attention modifies the vector representation of words to capture the context of their usage in an input sequence. 
+The “self” in self-attention refers to the fact that the mechanism uses the surrounding words within a single sequence to provide context. As such, self-attention requires all words to be processed in parallel. 
+
+This is actually one of the main benefits of transformers (especially compared to RNNs) since the models can leverage parallel processing for a significant performance boost. 
+
+
 The self-attention mechanism is a crucial part of transformers, allowing them to process sequences in parallel while weighing the importance of different words in a sentence dynamically. Here’s a breakdown of how it works:
 
 Key Concepts in Self-Attention
