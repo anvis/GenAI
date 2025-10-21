@@ -1,6 +1,11 @@
 
 ![image](https://github.com/user-attachments/assets/3719980c-6698-497b-b0d3-9ec5763270a2)
 
+- Eigenvector: A special vector that, when a matrix acts on it, doesn’t change direction—only its length might change.
+- Eigenvalue: The amount by which the eigenvector is stretched or shrunk during that transformation.
+
+Imagine pushing a swing. Most directions make the swing move in a complex way. But there's one direction—straight forward or backward—where the swing just goes higher or lower. That direction is like the eigenvector, and how much higher or lower it goes is the eigenvalue.
+
 These concepts help us understand the underlying structure of data, reduce dimensionality, and simplify complex problems. 
 
 Eigenvalues and eigenvectors feature prominently in the analysis of linear transformations. 
