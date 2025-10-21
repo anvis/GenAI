@@ -7,6 +7,8 @@ Bias is one type of error that occurs due to wrong assumptions about data such a
 
 **Bias**
 
+- Bias is when a model makes strong assumptions that oversimplify the problem.
+- Example: Imagine trying to predict house prices using only the number of bedrooms. If the model ignores location, size, or amenities, it will consistently make poor predictions. That’s high bias.
 
 Bias can emerge in the model of machine learning, When an algorithm generates results that are systematically prejudiced due to some inaccurate assumptions that were made throughout the process of machine learning.
 
@@ -33,6 +35,16 @@ Variance refers to the magnitude of the change that would occur in the estimatio
 | Goal | Reduce bias for better fit | Reduce variance for better generalization |
 
 > Think of bias as underfitting and variance as overfitting. The sweet spot is the **bias-variance tradeoff**.
+
+Bias-Variance Tradeoff
+
+- Goal: Find the sweet spot where the model is not too simple (low bias) and not too sensitive (low variance).
+  
+Analogy: Think of archery:
+- High bias: All arrows land far from the bullseye but close together.
+- High variance: Arrows are scattered all over the target.
+- Low bias + low variance: Arrows cluster around the bullseye.
+
 
 ---
 
