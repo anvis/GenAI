@@ -38,3 +38,14 @@
 
 - **Forward pass**: Activation functions shape the output of each layer.
 - **Backward pass**: Loss function computes error, and gradients flow back to update weights.
+
+---
+
+| Concept | Activation Function | Loss Function |
+|--------|----------------------|----------------|
+| Role | Adds non-linearity to neurons | Measures prediction error |
+| Examples | ReLU, Sigmoid, Tanh | MSE, Cross-Entropy |
+| Used in | Forward pass | Backpropagation |
+
+> Activation functions shape the neuron’s output; loss functions guide the learning.
+
