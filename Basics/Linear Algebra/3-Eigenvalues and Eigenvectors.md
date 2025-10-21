@@ -6,6 +6,8 @@
 
 Imagine pushing a swing. Most directions make the swing move in a complex way. But there's one direction—straight forward or backward—where the swing just goes higher or lower. That direction is like the eigenvector, and how much higher or lower it goes is the eigenvalue.
 
+Eigenvalues and eigenvectors help convert a matrix into diagonal form, which simplifies matrix operations like exponentiation and solving systems of equations
+
 These concepts help us understand the underlying structure of data, reduce dimensionality, and simplify complex problems. 
 
 Eigenvalues and eigenvectors feature prominently in the analysis of linear transformations. 
