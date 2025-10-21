@@ -62,6 +62,65 @@ Analogy: Think of archery:
 
 ### 🧪 3. **Precision vs Recall**
 
+Precision: 
+Precision measures the proportion of predicted positives that are actually correct.
+
+- Example:
+Suppose your spam filter flags 100 emails as spam.
+- 80 are actually spam (True Positives)
+- 20 are not spam (False Positives)
+→ Precision = \frac{80}{80 + 20} = 0.8 or 80%
+
+Recall:
+Recall measures the proportion of actual positives that were correctly identified.
+
+Suppose there are 120 spam emails in total.
+- Your filter correctly caught 80 (True Positives)
+- Missed 40 (False Negatives)
+→ Recall = \frac{80}{80 + 40} = 0.67 or 67%
+
+Tradeoff
+- High Precision, Low Recall: You’re very sure when you say something is spam, but you miss a lot of actual spam.
+- High Recall, Low Precision: You catch most spam, but also flag many legitimate emails incorrectly.
+
+- Precision: Of all people diagnosed with a disease, how many actually have it?
+- Recall: Of all people who truly have the disease, how many did the test catch?
+
+---
+
+How to Decide Which Matters More
+
+| Scenario | Prioritize | Why |
+|---------|------------|-----|
+| **Spam detection** | Precision | You don’t want to wrongly flag important emails as spam. |
+| **Disease screening** | Recall | You want to catch as many true cases as possible, even if some false alarms happen. |
+| **Loan approval agent** | Depends | High precision avoids false approvals; high recall ensures eligible users aren’t missed. |
+
+---
+
+### 📊 Choosing a Balance: F1 Score
+
+If you want a **balanced view**, use the **F1 Score**, which combines precision and recall:
+
+It’s especially useful when classes are imbalanced (e.g., fraud detection).
+
+---
+
+Loan Eligibility Agent
+
+Let’s say your agent flags 100 applicants as eligible:
+- 70 truly are (True Positives)
+- 30 are not (False Positives)
+- 20 eligible applicants were missed (False Negatives)
+
+- Precision = \( \frac{70}{70 + 30} = 0.7 \)
+- Recall = \( \frac{70}{70 + 20} = 0.78 \)
+- F1 Score ≈ 0.74
+
+If your goal is **minimizing risk**, you might want higher precision. If it’s **maximizing access**, go for higher recall.
+
+---
+
 | Concept | Precision | Recall |
 |--------|-----------|--------|
 | Definition | True Positives / Predicted Positives | True Positives / Actual Positives |
