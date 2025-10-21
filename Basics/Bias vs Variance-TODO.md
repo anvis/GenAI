@@ -22,8 +22,6 @@ To prevent the issue of underfitting, it is usually advised that an algorithm ha
 The difference in the accuracy of a machine learning model's predictions between the training data and the test data is referred to as variance. 
 Variance refers to the magnitude of the change that would occur in the estimation of the target function if a different set of training data was utilized. Because a machine learning algorithm infers the target function from the training data, it is reasonable to anticipate that the method will exhibit some degree of variability.
 
-Great prompt, Anvesh — covariance vs correlation is just the tip of the iceberg when it comes to subtle distinctions in ML and AI. Let’s explore a few more concept pairs that often get conflated, but have distinct roles and implications:
-
 ---
 
 ### 🔍 1. **Bias vs Variance**
