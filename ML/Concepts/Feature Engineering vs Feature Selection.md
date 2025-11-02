@@ -14,6 +14,7 @@ Examples:
 - Combine “height” and “weight” into a new feature: BMI.
 - Encode categorical variables (e.g., one-hot encoding for “color”). 
 
+---
 
 Feature Selection:
 
