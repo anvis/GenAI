@@ -1,5 +1,5 @@
 
-Every machine learning algorithm has a prediction error, which can be segmented into three subcomponents: bias error, variance error, and irreducible error.
+
 
 Bias is one type of error that occurs due to wrong assumptions about data such as assuming data is linear when in reality, data follows a complex function. On the other hand, variance gets introduced with high sensitivity to variations in training data.
 
@@ -44,37 +44,6 @@ Analogy: Think of archery:
 - High bias: All arrows land far from the bullseye but close together.
 - High variance: Arrows are scattered all over the target.
 - Low bias + low variance: Arrows cluster around the bullseye.
-
-
----
-
-
-### 🧬 4. **Generative vs Discriminative Models**
-
-| Concept | Generative | Discriminative |
-|--------|------------|----------------|
-| Learns | Joint probability \( P(X, Y) \) | Conditional probability \( P(Y|X) \) |
-| Examples | Naive Bayes, GANs | Logistic Regression, SVM |
-| Use Case | Data generation, unsupervised tasks | Classification, supervised tasks |
-
-> Generative models can **create** data; discriminative models **classify** it.
-
----
-
-### 🧱 5. **Feature Engineering vs Feature Selection**
-
-| Concept | Feature Engineering | Feature Selection |
-|--------|----------------------|-------------------|
-| Role | Create new features | Choose best existing features |
-| Examples | Date → Day, Month, Weekend | Remove low-variance or redundant features |
-| Goal | Improve model input | Reduce dimensionality and noise |
-
-> Engineering is **creative**; selection is **curative**.
-
----
-
-Would you like to map these to agentic workflows or build a quiz to reinforce them? I can also show how they play out in your loan assistant or resume agent logic.
-
 
 
 Think of bias as underfitting and variance as overfitting. The sweet spot is the bias-variance tradeoff.
