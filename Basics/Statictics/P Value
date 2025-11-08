@@ -1,2 +1,12 @@
 
-https://www.youtube.com/watch?v=Xni5YVlgiiQ
+P Value helps you decide whether to reject or not reject the null hypothesis in a hypothesis test.
+
+- **Small p-value (e.g., < 0.05)**:
+  - Strong evidence *against* the null hypothesis.
+  - Suggests the observed effect is *unlikely* due to random chance.
+  - You may **reject the null hypothesis**.
+- **Large p-value (e.g., > 0.05)**:
+  - Weak evidence against the null.
+  - The observed effect could easily occur by chance.
+  - You **do not reject the null hypothesis**.
+
