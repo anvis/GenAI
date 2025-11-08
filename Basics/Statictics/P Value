@@ -2,11 +2,28 @@
 P Value helps you decide whether to reject or not reject the null hypothesis in a hypothesis test.
 
 - **Small p-value (e.g., < 0.05)**:
+
   - Strong evidence *against* the null hypothesis.
   - Suggests the observed effect is *unlikely* due to random chance.
   - You may **reject the null hypothesis**.
+
 - **Large p-value (e.g., > 0.05)**:
+
   - Weak evidence against the null.
   - The observed effect could easily occur by chance.
   - You **do not reject the null hypothesis**.
 
+
+- Suppose you're testing a new drug to lower blood pressure.
+  - **Null hypothesis (H₀)**: The drug has *no effect*.
+  - **Alternative hypothesis (H₁)**: The drug *does* lower blood pressure.
+- After testing, you get a **p-value of 0.02**.
+  - This means there's a **2% chance** of seeing such a strong effect *if* the drug actually had no effect.
+  - Since 0.02 < 0.05, you reject H₀ and conclude the drug likely works.
+
+
+| P-Value Range | Interpretation | Action |
+|---------------|----------------|--------|
+| < 0.01        | Very strong evidence against H₀ | Reject H₀ |
+| 0.01–0.05     | Moderate evidence against H₀    | Reject H₀ |
+| > 0.05        | Weak evidence against H₀        | Do not reject H₀ |
