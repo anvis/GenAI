@@ -1,3 +1,13 @@
+
+LLM can understand Language with help of NLP and get the context and intent of user. but llm cannot perform the actions.
+Tools can perform actions but cannot understand the language.
+
+In an Agentic Application we will use LLM and Tools to perform such actions.
+
+LLM also has ability to pick the tool based on given context from list of tools we have provided to it.
+
+---
+
 Agentic AI orchestration is about coordinating multiple AI agents so they can work together like a team.
 
 - Agents = Specialists (e.g., one agent for research, another for summarization).
@@ -37,3 +47,4 @@ Example: Agent A searches web, Agent B queries database → results combined.
 **Hierarchical orchestratio**n
 - A “manager” agent assigns tasks to worker agents.
 Example: Manager agent decides whether to use Research or Calculator agent.
+
