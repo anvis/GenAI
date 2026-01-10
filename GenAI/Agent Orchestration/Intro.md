@@ -1,10 +1,10 @@
 
-LLM can understand Language with help of NLP and get the context and intent of user. but llm cannot perform the actions.
-Tools can perform actions but cannot understand the language.
+- LLM can understand Language with help of NLP and get the context and intent of user. but llm cannot perform the actions.
+- Tools can perform actions but cannot understand the language.
+- In an Agentic Application we will combine both of these and to perform user actions.
+- LLM also has ability to pick the tool based on given context from list of tools we have provided to it.
 
-In an Agentic Application we will use LLM and Tools to perform such actions.
-
-LLM also has ability to pick the tool based on given context from list of tools we have provided to it.
+- User sends a query to application, application has list of tools but not sure which tool to use, so it sends query to LLM, LLM does the work of selecting the tool and required data. The result from tool sent to LLM to build user Response
 
 ---
 
@@ -47,4 +47,5 @@ Example: Agent A searches web, Agent B queries database → results combined.
 **Hierarchical orchestratio**n
 - A “manager” agent assigns tasks to worker agents.
 Example: Manager agent decides whether to use Research or Calculator agent.
+
 
