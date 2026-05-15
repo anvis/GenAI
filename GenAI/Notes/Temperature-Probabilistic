@@ -1,0 +1,22 @@
+Temperature:
+A scaling factor applied to the probability distribution of the next token.
+
+- Low temperature (≈0–0.3): Model becomes deterministic, always picking the highest-probability token. Output is factual, repetitive, and safe.
+- Medium temperature (≈0.7): Balanced creativity and coherence.
+- High temperature (≈1.0+): Model explores more diverse tokens, leading to creative but sometimes incoherent answers.
+
+lower temperatures (T <= 0.7) are suitable for tasks requiring precision and reliability, e.g. factual question answering
+moderate temperatures (0.7 < T <= 1) are suitable for general-purpose conversations where you need reliability but also some degree of creativity, e.g. for a chat bot
+higher temperatures (T > 1) are suitable for creative endeavors, e.g. for storytelling or brainstorming
+
+Top-k Sampling:
+Instead of considering all possible tokens, the model only looks at the top k most likely tokens.
+
+- Small k (e.g., 5): Restricts choices, output is focused and predictable.
+- Large k (e.g., 50): More variety, but risk of drifting off-topic.
+
+Nucleus Sampling (Top-p):
+Instead of a fixed number of tokens (like top-k), it selects from the smallest set of tokens whose cumulative probability ≥ p.
+
+- Low p (≈0.3): Very restrictive, only the most probable tokens are considered.
+- High p (≈0.9): Much more diverse, allowing rare but interesting tokens.
