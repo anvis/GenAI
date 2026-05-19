@@ -95,14 +95,14 @@ Since you’re working with **LangChain**, tokenization plays a key role in stru
 
 
 
-
+---
 
 
 **BPE tokenization — why "hello" is 1 token but "antidisestablishmentarianism" is 6**
 
 How modern tokenizers like **Byte Pair Encoding (BPE)** work.
 
----
+
 
 ## 🧩 What BPE Tokenization Does
 BPE doesn’t split text by words or characters directly.  
