@@ -1,3 +1,7 @@
+
+**Fine Tuning**
+ ---
+ 
  **LoRA** and **QLoRA** are game-changing techniques in the realm of **parameter-efficient fine-tuning (PEFT)**, especially for large language models (LLMs). Let’s break them down clearly:
 
 ---
@@ -6,6 +10,8 @@
 
 **Purpose:**  
 Fine-tune large models **without updating all parameters**, saving compute and memory.
+
+Instead of replacing entire model we fine tune with only few parameters. 
 
 **How It Works:**
 - Instead of modifying the full weight matrices in a model, LoRA inserts **small trainable low-rank matrices** (adapters) into specific layers (typically attention and feed-forward layers).
