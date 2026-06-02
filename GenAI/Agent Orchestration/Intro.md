@@ -18,6 +18,7 @@ Agentic AI orchestration is about coordinating multiple AI agents so they can wo
 Frameworks for orchestration
 
 - **LangChain** → popular for chaining agents and tools.
+- **LangGraph**
 - **CrewAI** → focuses on multi-agent collaboration.
 - **AutoGen** (Microsoft) → designed for agent-to-agent conversations.
 - **LlamaIndex** → useful when agents need structured knowledge retrieval.
