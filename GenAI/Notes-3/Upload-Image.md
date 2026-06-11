@@ -54,3 +54,7 @@ Think of it like this:
 - Eyes (Vision Model) → See and convert pixels into meaning.
 - Brain (LLM) → Understands your question and explains the meaning in words.
 - Together, they form a multimodal AI pipeline.
+
+---
+
+<img width="1408" height="768" alt="Gemini_Generated_Image_o8elqio8elqio8el" src="https://github.com/user-attachments/assets/953ea574-64ad-4fbd-b54c-044f773e5e9e" />
