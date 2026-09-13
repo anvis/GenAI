@@ -2,9 +2,14 @@
 ### Gradient Descent and Backpropagation in Machine Learning
 
 Gradient Descent and Backpropagation are fundamental concepts in training neural networks and optimizing machine learning models.
+They work together like this: backprop calculates the gradient → gradient descent uses that gradient to update the weights → repeat over many epochs.
 
 #### **Gradient Descent**
+Gradient Descent used to find out the error, model is generating and works towards minimizing it.
+
 Gradient Descent is an optimization algorithm used to minimize the loss function of a model by adjusting its parameters iteratively. It works by computing the gradient (slope) of the loss function and updating the model parameters in the direction that reduces the error.
+
+Gradient descent is a general-purpose optimization algorithm. Its job: given a function (the loss function, which measures how wrong the model's predictions are), find the input values (the model's weights) that minimize it.
 
 ##### **Types of Gradient Descent**
 1. **Batch Gradient Descent** – Uses the entire dataset to compute the gradient.
@@ -15,7 +20,11 @@ Gradient Descent is an optimization algorithm used to minimize the loss function
 Imagine you are trying to find the lowest point in a valley while blindfolded. You take small steps in the direction of the steepest descent until you reach the bottom. This is similar to how gradient descent optimizes a model.
 
 #### **Backpropagation**
+Backpropagation calculates the gradient (the step) that Gradient Descent uses.
+
 Backpropagation is an algorithm used to compute the gradients of the loss function with respect to each parameter in a neural network. It propagates the error backward through the network using the chain rule of calculus.
+
+
 
 ##### **Steps in Backpropagation**
 1. **Forward Pass** – Compute the output of the neural network.

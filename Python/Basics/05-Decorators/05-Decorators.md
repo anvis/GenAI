@@ -151,6 +151,65 @@ greet("Anvesh")
 
 ---
 
+```
+@decorator1
+@decorator2
+@decorator3
+def my_function():
+    pass
+```
+
+This is equivalant to 
+
+```
+def my_function():
+    pass
+
+my_function = decorator1(decorator2(decorator3(my_function)))
+
+```
+
+Example
+
+```
+def decorator1(func):
+    def wrapper(*args, **kwargs):
+        print("1: before")
+        result = func(*args, **kwargs)
+        print("1: after")
+        return result
+    return wrapper
+
+def decorator2(func):
+    def wrapper(*args, **kwargs):
+        print("2: before")
+        result = func(*args, **kwargs)
+        print("2: after")
+        return result
+    return wrapper
+
+@decorator1
+@decorator2
+def greet():
+    print("Hello!")
+
+greet()
+
+```
+
+output
+
+```
+1: before
+2: before
+Hello!
+2: after
+1: after
+
+```
+
+---
+
 ### 🧩 Decorators with Arguments
 
 You can pass arguments to decorators by nesting them:
